@@ -33,18 +33,6 @@ export const Phone = styled.div`
     padding: 0 0 0 2vh;
   }
 `
-export const ButtonWhatsUp = styled.div`
-  padding: 1vh;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
-  p {
-    padding: 0 0 0 2vh;
-  }
-`
 export const Text = styled.div`
   h1,
   h2 {

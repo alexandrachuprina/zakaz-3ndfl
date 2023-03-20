@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import { Col, Row } from "antd";
-import { PhoneFilled, WhatsAppOutlined } from "@ant-design/icons";
+import { PhoneFilled } from "@ant-design/icons";
 
-import { Logo, Navbar, Phone, ButtonWhatsUp, Text } from "../../styles/Header";
+import { Logo, Navbar, Phone, Text } from "../../styles/Header";
 
 import HeaderForm from "@/forms/Header";
+import ButtonWhatsWhite from "../Buttons/ButtonWhatsUpWhite";
 
 import logo from "../../assets/Header/logo.svg";
 import background from "../../assets/Header/background.jpg";
@@ -38,15 +39,12 @@ const Header = () => {
                 <PhoneFilled />
                 <h2>+7 800 000 00 00</h2>
               </Phone>
-              <ButtonWhatsUp>
-                <WhatsAppOutlined style={{ color: "white" }} />
-                <p>Написать в Whats-up</p>
-              </ButtonWhatsUp>
+              <ButtonWhatsWhite />
             </Navbar>
 
             <Text>
               <h1>
-                Заполним декларацию <br/> 3-НДФЛ
+                Заполним декларацию <br /> 3-НДФЛ
               </h1>
               <h2>Бесплатная консультация специалиста</h2>
               <h2>Оплата после выполнения</h2>
