@@ -1,18 +1,12 @@
 import styled from "styled-components";
-import background from '../src/assets/Header/background.jpg';
-import { queries } from '../src/assets/queries';
+import background from 'src/assets/Header/background.jpg';
+import { queries } from '../assets/queries';
 import Image from "next/image";
 
-export const StyledHeader = styled.div`
-  /* position: absolute; */
-  /* height: 100vh; */
-  /* display: flex; */
-
-`
-export const StyledLogo = styled.div`
+export const Logo = styled.div`
   padding: 0 0 2vh 0;
 `
-export const StyledNavbar = styled.div`
+export const Navbar = styled.div`
   padding: 2vh 0 2vh 0;
   display: flex;
   flex-direction: column;
@@ -30,7 +24,7 @@ export const StyledNavbar = styled.div`
   }
   
 `
-export const StyledPhone = styled.div`
+export const Phone = styled.div`
   padding: 0 0 2vh 0;
   display: flex;
   flex-direction: row;
@@ -39,7 +33,7 @@ export const StyledPhone = styled.div`
     padding: 0 0 0 2vh;
   }
 `
-export const StyledButtonWhatsUp = styled.div`
+export const ButtonWhatsUp = styled.div`
   padding: 1vh;
   width: 100%;
   display: flex;
@@ -51,7 +45,7 @@ export const StyledButtonWhatsUp = styled.div`
     padding: 0 0 0 2vh;
   }
 `
-export const StyledText = styled.div`
+export const Text = styled.div`
   h1,
   h2 {
     color: white;
@@ -59,4 +53,6 @@ export const StyledText = styled.div`
   }
 `
 
-export const ghghgh = styled(Image)
+// export const Background = styled(Image)`
+//   background-image: url(${background});
+// `
