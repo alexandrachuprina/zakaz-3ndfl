@@ -4,24 +4,21 @@ import Image from 'next/image';
 import { Col, Row } from 'antd';
 
 import {
-  StyledMain,
-  StyledCard
+  MainWrapper
 }
   from '../../styles/Main';
 
-export default function Main() {
+function Main() {
   return (
-    <Row>
+    <Row justify={'center'}>
       <Col span={24}>
 
         <Row>
           <Col span={22}>
 
-            <StyledMain>
-              <StyledCard>
+            <MainWrapper>
 
-              </StyledCard>
-            </StyledMain>
+            </MainWrapper>
 
           </Col>
         </Row>
@@ -30,3 +27,5 @@ export default function Main() {
     </Row>
   )
 }
+
+export default Main;

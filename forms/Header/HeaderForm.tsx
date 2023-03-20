@@ -1,15 +1,17 @@
 import React from "react";
 
 import { Button, Form, Input, Select } from "antd";
-import { InputHeader, Card } from "../styles/HeaderForm";
+import { InputHeader, CardWrapper, Card } from "../styles/HeaderForm";
 
 const { Option } = Select;
 
 function HeaderForm() {
   return (
-    <>
+    <CardWrapper>
       <Card>
-        <p>Заполните заявку и мы свяжемся с Вами в ближайшее время!</p>
+        <InputHeader>
+          <p>Заполните заявку и мы свяжемся с Вами в ближайшее время!</p>
+        </InputHeader>
         <p>Телефон для связи</p>
 
         <Form
@@ -30,7 +32,7 @@ function HeaderForm() {
             <Input />
           </Form.Item>
 
-          <p>Телефон для связи</p>
+          <p>На что у Вас 3-НДФЛ</p>
 
           <Select
             defaultValue="property"
@@ -46,19 +48,14 @@ function HeaderForm() {
             <Option value="professional">Профессиональный вычет</Option>
           </Select>
 
-          <Form.Item>
-            <Button
-              type="primary"
-              htmlType="submit"
-              style={{ width: "100%"}}
-            >
-              <p>ЗАКАЗАТЬ</p>
+          <Form.Item style={{ paddingTop: "4vw" }}>
+            <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
+              <p>Заказать</p>
             </Button>
           </Form.Item>
-
         </Form>
       </Card>
-    </>
+    </CardWrapper>
   );
 }
 

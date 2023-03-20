@@ -13,7 +13,7 @@ import background from "../../assets/Header/background.jpg";
 
 const Header = () => {
   return (
-    <Row justify={"center"}>
+    <Row justify="center">
       <Col span={24}>
         <Image
           src={background}
@@ -21,13 +21,14 @@ const Header = () => {
           style={{
             position: "absolute",
             width: "100%",
-            height: "100vh",
+            height: "100%",
             zIndex: "-1",
             objectFit: "cover",
+            backgroundSize: "cover",
           }}
         />
 
-        <Row justify={"center"}>
+        <Row justify="center">
           <Col span={22}>
             <Navbar>
               <Logo>
@@ -44,7 +45,9 @@ const Header = () => {
             </Navbar>
 
             <Text>
-              <h1>Заполним декларацию 3-НДФЛ</h1>
+              <h1>
+                Заполним декларацию <br/> 3-НДФЛ
+              </h1>
               <h2>Бесплатная консультация специалиста</h2>
               <h2>Оплата после выполнения</h2>
               <h2>Сопровождение до завершения проверки декларации</h2>
@@ -53,7 +56,6 @@ const Header = () => {
             <HeaderForm />
           </Col>
         </Row>
-
       </Col>
     </Row>
   );

@@ -55,4 +55,7 @@ export const Text = styled.div`
 
 // export const Background = styled(Image)`
 //   background-image: url(${background});
+//   background-position: center center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
 // `
