@@ -5,12 +5,16 @@ import { InputHeader, CardWrapper, Card } from "../styles/HeaderForm";
 
 const { Option } = Select;
 
-function HeaderForm() {
+interface Props {
+  header: string;
+}
+
+function HeaderForm(props: Props) {
   return (
     <CardWrapper>
       <Card>
         <InputHeader>
-          <p>Заполните заявку и мы свяжемся с Вами в ближайшее время!</p>
+          <p>{props.header}</p>
         </InputHeader>
         <p>Телефон для связи</p>
 
