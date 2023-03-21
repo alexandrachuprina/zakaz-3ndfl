@@ -2,11 +2,14 @@ import React from "react";
 
 import { Button, Form, Input, Select } from "antd";
 import { InputHeader, CardWrapper, Card } from "../styles/HeaderForm";
+import ButtonWhatsBlack from "@/src/components/Buttons/ButtonWhatsUpBlack";
 
 const { Option } = Select;
 
 interface Props {
   header: string;
+  button: boolean;
+  text?: string;
 }
 
 function HeaderForm(props: Props) {
@@ -57,6 +60,13 @@ function HeaderForm(props: Props) {
               <p>Заказать</p>
             </Button>
           </Form.Item>
+
+          {props.button ? (
+            <>
+              <p>{props.text}</p>
+              <ButtonWhatsBlack />
+            </>
+          ) : null}
         </Form>
       </Card>
     </CardWrapper>

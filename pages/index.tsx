@@ -7,7 +7,9 @@ import Header from "@/src/components/Header";
 import Main from "@/src/components/Main";
 import Timeline from "@/src/components/Timeline";
 import DocsList from "@/src/components/DocsList";
-import OrderForm from "@/src/components/OrderForm.tsx";
+import OrderForm from "@/src/components/OrderForm";
+import Contacts from "@/src/components/Contacts";
+import MapSection from "@/src/components/Map";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <Timeline />
       <DocsList />
       <OrderForm />
+      <Contacts/>
+      <MapSection/>
     </>
   );
 }
