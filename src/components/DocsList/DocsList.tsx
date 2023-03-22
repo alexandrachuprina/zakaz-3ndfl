@@ -24,7 +24,7 @@ function DocsList() {
       <Row justify={"center"}>
         <Col span={24}>
           <Row justify={"center"}>
-            <Col span={22}>
+            <Col span={22} md={18}>
               <Wrapper>
                 <Header>
                   <p>Список необходимых документов</p>

@@ -8,7 +8,7 @@ function Timeline() {
     <Row justify={"center"}>
       <Col span={24}>
         <Row justify={"center"}>
-          <Col span={22}>
+          <Col span={22} md={18}>
             <Wrapper>
               <TimeCard
                 number={1}

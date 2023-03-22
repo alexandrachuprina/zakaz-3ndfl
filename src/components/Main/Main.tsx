@@ -5,17 +5,20 @@ import MainCard from "./MainCard";
 import { Col, Row } from "antd";
 
 import { MainWrapper } from "../../styles/Main";
-import pic01 from "../../assets/Main/pic01.png";
-import pic02 from "../../assets/Main/pic02.png";
-import pic03 from "../../assets/Main/pic03.png";
+import pic01 from "../../assets/Main/pic01.svg";
+import pic02 from "../../assets/Main/pic02.svg";
+import pic03 from "../../assets/Main/pic03.svg";
 import pic04 from "../../assets/Main/pic04.svg";
+import pic05 from "../../assets/Main/pic05.svg";
+import pic06 from "../../assets/Main/pic06.svg";
+import pic07 from "../../assets/Main/pic07.svg";
 
 function Main() {
   return (
     <Row justify={"center"}>
       <Col span={24}>
         <Row justify={"center"}>
-          <Col span={22}>
+          <Col span={22} md={18} lg={22} xl={22}>
             <MainWrapper>
               <MainCard
                 header="КУПИЛИ НЕДВИЖИМОСТЬ?"
@@ -35,7 +38,7 @@ function Main() {
                 buttonText='ЗАКАЗАТЬ'
               />
               <MainCard
-                header="КУПИЛИ НЕДВИЖИМОСТЬ?"
+                header="ОПЛАТИЛИ ЛЕЧЕНИЕ?"
                 paragraph1="Вы приобрели недвижимость (квартира, дом, комната, земельный участок с домом)?"
                 paragraph2="Вы можете вернуть до 260 000 рублей с суммы, уплаченной за вашу квартиру или дом, 
                 а также можете вернуть до 390 000 рублей с уплаченных процентов по ипотеке."
@@ -44,13 +47,43 @@ function Main() {
                 buttonText='ЗАКАЗАТЬ'
               />
               <MainCard
-                header="Бесплатная регистрация ИП и ООО"
+                header="ДОПОЛНИТЕЛЬНЫЙ ДОХОД"
                 paragraph1="Подготовим все нужные документы"
                 paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
                 Вы не платите госпошлину 800 ₽
                 Вам не нужно ходить в налогоовую"
                 //@ts-ignore
                 src={pic04}
+                buttonText='ОСТАВИТЬ ЗАЯВКУ'
+              />
+                   <MainCard
+                header="СТРАХОВАНИЕ"
+                paragraph1="Подготовим все нужные документы"
+                paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
+                Вы не платите госпошлину 800 ₽
+                Вам не нужно ходить в налогоовую"
+                //@ts-ignore
+                src={pic05}
+                buttonText='ОСТАВИТЬ ЗАЯВКУ'
+              />
+                   <MainCard
+                header="ИНВЕСТИЦИИ"
+                paragraph1="Подготовим все нужные документы"
+                paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
+                Вы не платите госпошлину 800 ₽
+                Вам не нужно ходить в налогоовую"
+                //@ts-ignore
+                src={pic06}
+                buttonText='ОСТАВИТЬ ЗАЯВКУ'
+              />
+                   <MainCard
+                header="БЕСПЛАТНАЯ РЕГИСТРАЦИЯ ИП И ООО"
+                paragraph1="Подготовим все нужные документы"
+                paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
+                Вы не платите госпошлину 800 ₽
+                Вам не нужно ходить в налогоовую"
+                //@ts-ignore
+                src={pic07}
                 buttonText='ОСТАВИТЬ ЗАЯВКУ'
               />
             </MainWrapper>

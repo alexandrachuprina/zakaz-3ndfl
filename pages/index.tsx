@@ -10,6 +10,7 @@ import DocsList from "@/src/components/DocsList";
 import OrderForm from "@/src/components/OrderForm";
 import Contacts from "@/src/components/Contacts";
 import MapSection from "@/src/components/Map";
+import Footer from "@/src/components/Footer";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <OrderForm />
       <Contacts/>
       <MapSection/>
+      <Footer/>
     </>
   );
 }

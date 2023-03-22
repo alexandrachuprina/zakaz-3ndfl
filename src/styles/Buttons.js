@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { queries } from "../assets/queries";
 
 const ButtonWhats = styled.div`
   padding: 1vh;
@@ -9,6 +10,14 @@ const ButtonWhats = styled.div`
   align-items: center;
   p {
     padding: 0 0 0 2vh;
+  }
+
+  @media (min-width: ${queries.sm}) {
+    width: 30vw;
+  }
+  
+  @media (min-width: ${queries.lg}) {
+    width: 25vw;
   }
 `
 export const ButtonWhatsW = styled(ButtonWhats)`

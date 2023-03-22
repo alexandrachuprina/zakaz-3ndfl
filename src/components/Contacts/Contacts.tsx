@@ -14,7 +14,7 @@ function Contacts() {
     <Row justify={"center"}>
       <Col span={24}>
         <Row justify={"center"}>
-          <Col span={22}>
+          <Col span={22} md={18}>
             <Text>
               <Header>
                 <h1>Контактная информация</h1>
