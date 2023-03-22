@@ -3,7 +3,7 @@ import { queries } from "../assets/queries";
 
 const ButtonWhats = styled.div`
   padding: 1vh;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -29,7 +29,7 @@ export const ButtonWhatsB = styled(ButtonWhats)`
 export const ButtonOrders = styled.div`
   margin-top: 2vh;
   padding: 1vh;
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: center;
