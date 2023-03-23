@@ -1,5 +1,5 @@
 
-# Educational project on trainee position
+# Educational project (trainee position)
 
 ## Work in progress
 
