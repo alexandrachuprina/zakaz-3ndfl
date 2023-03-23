@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "antd";
 import HeaderForm from "@/forms/Header";
 import Image from "next/image";
-import { ImageWrapper, Section } from "@/src/styles/OrderForm";
+import { ImageWrapper, Section, Wrapper } from "@/src/styles/OrderForm";
 import icon from "../../assets/OrderForm/icon.svg";
 import ButtonWhatsBlack from "../Buttons/ButtonWhatsUpBlack";
 
@@ -12,22 +12,24 @@ function OrderForm() {
       <Row justify={"center"}>
         <Col span={24}>
           <Row justify={"center"}>
-            <Col span={22} md={18}>
-              <ImageWrapper>
-                <Image
-                  src={icon}
-                  alt="icon"
-                  style={{
-                    width: "auto",
-                    height: "100%",
-                  }}
+            <Col span={22} md={18} lg={22} xl={22}>
+              <Wrapper>
+                <ImageWrapper>
+                  <Image
+                    src={icon}
+                    alt="icon"
+                    style={{
+                      width: "auto",
+                      height: "100%",
+                    }}
+                  />
+                </ImageWrapper>
+                <HeaderForm
+                  header="Закажите бесплатную консультацию"
+                  button={true}
+                  text="Напите нам в WhatsApp"
                 />
-              </ImageWrapper>
-              <HeaderForm
-                header="Закажите бесплатную консультацию"
-                button={true}
-                text="Напите нам в WhatsApp"
-              />
+              </Wrapper>
             </Col>
           </Row>
         </Col>

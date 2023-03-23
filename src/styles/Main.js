@@ -1,7 +1,17 @@
 import styled from "styled-components";
+import { queries } from "../assets/queries";
+import { colors } from "../assets/colors";
 
 export const MainWrapper = styled.div`
+display: grid;
   padding: 4vh 0vh 4vh 0;
+
+  @media (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 100vh;
+    column-gap: 10%;
+  }
 `
 export const CardWrapper = styled.div`
   padding: 3vh 0 3vh 0;
@@ -18,6 +28,13 @@ export const ImageWrapper = styled.div`
 export const TextWrapper = styled.div`
   padding-bottom: 2vh;
 `
+export const Price = styled.div`
+  margin: 2vh 0 2vh 0;
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: ${colors.yellow};
+  color: black;
+`
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,3 +44,7 @@ export const Header = styled.div`
     padding-bottom: 2vh;
   }
 `
+export const ButtonsWrapper = styled.div`
+  margin-top: auto;
+`
+

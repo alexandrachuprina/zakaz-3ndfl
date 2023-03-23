@@ -21,7 +21,7 @@ export default function Home() {
       <DocsList />
       <OrderForm />
       <Contacts/>
-      <MapSection/>
+      {/* <MapSection/> */}
       <Footer/>
     </>
   );

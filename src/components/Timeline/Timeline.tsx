@@ -8,7 +8,8 @@ function Timeline() {
     <Row justify={"center"}>
       <Col span={24}>
         <Row justify={"center"}>
-          <Col span={22} md={18}>
+          <Col span={22} md={18} lg={22}>
+            <h1 style={{display: 'flex', justifyContent: 'center', margin: '4vh 0 4vh 0'}}>Как мы работаем</h1>
             <Wrapper>
               <TimeCard
                 number={1}

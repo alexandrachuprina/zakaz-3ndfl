@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { queries } from "../assets/queries";
 
 export const Text = styled.div`
   padding: 4vh 0 4vh 0;
@@ -22,4 +23,9 @@ export const Social = styled.div`
 export const SocialWrapper = styled.div`
   display: flex;
   flex-direction: row;
+`
+export const Section = styled.div`
+   @media (min-width: ${queries.lg}) {
+    /* position: absolute; */
+  }
 `

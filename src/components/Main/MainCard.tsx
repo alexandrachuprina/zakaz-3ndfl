@@ -5,6 +5,8 @@ import {
   CardWrapper,
   ImageWrapper,
   TextWrapper,
+  ButtonsWrapper,
+  Price,
 } from "../../styles/Main";
 import ButtonWhatsUpBlack from "../Buttons/ButtonWhatsUpBlack";
 import ButtonOrder from "../Buttons/ButtonOrder";
@@ -15,6 +17,7 @@ interface Props {
   paragraph2: string;
   src: string;
   buttonText: string;
+  price: boolean;
 }
 
 function MainCard(props: Props) {
@@ -37,9 +40,16 @@ function MainCard(props: Props) {
         <p>{props.paragraph1}</p>
         <br />
         <p>{props.paragraph2}</p>
+        {props.price ? (
+          <Price>
+            <p>300 ₽</p>
+          </Price>
+        ) : null}
       </TextWrapper>
-      <ButtonWhatsUpBlack />
-      <ButtonOrder text={props.buttonText} />
+      <ButtonsWrapper>
+        <ButtonOrder text={props.buttonText} />
+        <ButtonWhatsUpBlack />
+      </ButtonsWrapper>
     </CardWrapper>
   );
 }

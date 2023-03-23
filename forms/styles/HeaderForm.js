@@ -5,9 +5,11 @@ export const CardWrapper = styled.div`
   box-sizing: border-box;
   width: 100%;
   align-self: center;
+  margin-bottom: 4vh;
   
   @media (min-width: ${queries.lg}) {
     width: 40vw;
+    margin: 0;
   }
 `
 export const Card = styled.div`

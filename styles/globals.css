@@ -1,7 +1,9 @@
+@import url('../node_modules/antd/dist/antd.css');
+@import url('/node_modules/normalize-css/normalize.css');
+
 body,
 html {
   margin: 0;
-  /* background-color: lightblue; */
 }
 
 h1,

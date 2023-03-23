@@ -12,6 +12,7 @@ import {
   MainSection,
   Wrapper,
   HeadWrapper,
+  ButtonWrapper,
 } from "../../styles/Header";
 
 import HeaderForm from "@/forms/Header";
@@ -23,9 +24,8 @@ import background from "../../assets/Header/background.jpg";
 const Header = () => {
   return (
     <HeadWrapper>
-      <Row justify="center" style={{ height: "100%" }}>
-
-          <Image
+      <Row justify="center">
+        {/* <Image
             src={background}
             alt="background"
             style={{
@@ -36,41 +36,39 @@ const Header = () => {
               objectFit: "cover",
               backgroundSize: "cover",
             }}
-          />
+          /> */}
 
-        <Col span={24}>
-          <Row justify="center" style={{ height: "100%" }}>
-            <Col span={22} md={18} lg={22} xl={22}>
-              <Navbar>
-                <Logo>
-                  <Image src={logo} alt="Logo" width={`180`} />
-                </Logo>
-                <Phone style={{ color: "white" }}>
-                  <PhoneFilled />
-                  <h2>+7 800 000 00 00</h2>
-                </Phone>
-                <ButtonWhatsWhite />
-              </Navbar>
+        <Col span={22} md={18} lg={22} xl={22}>
+          <Navbar>
+            <Logo>
+              <Image src={logo} alt="Logo" width={`180`} />
+            </Logo>
+            <Phone style={{ color: "white" }}>
+              <PhoneFilled />
+              <h2>+7 800 000 00 00</h2>
+            </Phone>
+            <ButtonWrapper>
+              <ButtonWhatsWhite />
+            </ButtonWrapper>
+          </Navbar>
 
-              <Wrapper>
-                <MainSection>
-                  <Text>
-                    <h1>
-                      Заполним декларацию <br /> 3-НДФЛ
-                    </h1>
-                    <h2>Бесплатная консультация специалиста</h2>
-                    <h2>Оплата после выполнения</h2>
-                    <h2>Сопровождение до завершения проверки декларации</h2>
-                  </Text>
+          <Wrapper>
+            <MainSection>
+              <Text>
+                <h1>
+                  Заполним декларацию <br /> 3-НДФЛ
+                </h1>
+                <h2>Бесплатная консультация специалиста</h2>
+                <h2>Оплата после выполнения</h2>
+                <h2>Сопровождение до завершения проверки декларации</h2>
+              </Text>
 
-                  <HeaderForm
-                    header="Заполните заявку и мы свяжемся с Вами в ближайшее время!"
-                    button={false}
-                  />
-                </MainSection>
-              </Wrapper>
-            </Col>
-          </Row>
+                <HeaderForm
+                  header="Заполните заявку и мы свяжемся с Вами в ближайшее время!"
+                  button={false}
+                />
+            </MainSection>
+          </Wrapper>
         </Col>
       </Row>
     </HeadWrapper>

@@ -3,12 +3,12 @@ import { Row, Col, Collapse } from "antd";
 import DocCard from "./DocCard";
 import { Header, Wrapper, Section } from "../../styles/DocsList";
 import Image from "next/image";
-import icon from '../../assets/DocsList/icon.svg';
+import icon from "../../assets/DocsList/icon.svg";
 
 function DocsList() {
   return (
     <Section>
-      <Image
+      {/* <Image
         src={icon}
         alt="icon"
         style={{
@@ -19,16 +19,22 @@ function DocsList() {
           objectFit: "cover",
           backgroundSize: "cover",
         }}
-      />
+      /> */}
 
       <Row justify={"center"}>
         <Col span={24}>
           <Row justify={"center"}>
-            <Col span={22} md={18}>
+            <Col span={22} md={18} lg={22}>
               <Wrapper>
-                <Header>
-                  <p>Список необходимых документов</p>
-                </Header>
+                <h1
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    margin: "4vh 0 4vh 0",
+                  }}
+                >
+                  Список необходимых документов
+                </h1>
                 <DocCard
                   header1="Необходимые документы при имущественном вычете при покупке квартиры"
                   paragraph1="text"

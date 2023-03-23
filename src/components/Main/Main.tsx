@@ -16,9 +16,7 @@ import pic07 from "../../assets/Main/pic07.svg";
 function Main() {
   return (
     <Row justify={"center"}>
-      <Col span={24}>
-        <Row justify={"center"}>
-          <Col span={22} md={18} lg={22} xl={22}>
+      <Col span={22} md={18} lg={16} xl={22}>
             <MainWrapper>
               <MainCard
                 header="КУПИЛИ НЕДВИЖИМОСТЬ?"
@@ -27,7 +25,8 @@ function Main() {
                 а также можете вернуть до 390 000 рублей с уплаченных процентов по ипотеке."
                 //@ts-ignore
                 src={pic01}
-                buttonText='ЗАКАЗАТЬ'
+                buttonText="ЗАКАЗАТЬ"
+                price={true}
               />
               <MainCard
                 header="ОПЛАТИЛИ ОБУЧЕНИЕ?"
@@ -35,7 +34,8 @@ function Main() {
                 paragraph2="Вы имеете право получить 13% от сумм, затраченных Вами на обучение."
                 //@ts-ignore
                 src={pic02}
-                buttonText='ЗАКАЗАТЬ'
+                buttonText="ЗАКАЗАТЬ"
+                price={true}
               />
               <MainCard
                 header="ОПЛАТИЛИ ЛЕЧЕНИЕ?"
@@ -44,7 +44,8 @@ function Main() {
                 а также можете вернуть до 390 000 рублей с уплаченных процентов по ипотеке."
                 //@ts-ignore
                 src={pic03}
-                buttonText='ЗАКАЗАТЬ'
+                buttonText="ЗАКАЗАТЬ"
+                price={true}
               />
               <MainCard
                 header="ДОПОЛНИТЕЛЬНЫЙ ДОХОД"
@@ -54,9 +55,10 @@ function Main() {
                 Вам не нужно ходить в налогоовую"
                 //@ts-ignore
                 src={pic04}
-                buttonText='ОСТАВИТЬ ЗАЯВКУ'
+                buttonText="ОСТАВИТЬ ЗАЯВКУ"
+                price={true}
               />
-                   <MainCard
+              <MainCard
                 header="СТРАХОВАНИЕ"
                 paragraph1="Подготовим все нужные документы"
                 paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
@@ -64,9 +66,10 @@ function Main() {
                 Вам не нужно ходить в налогоовую"
                 //@ts-ignore
                 src={pic05}
-                buttonText='ОСТАВИТЬ ЗАЯВКУ'
+                buttonText="ОСТАВИТЬ ЗАЯВКУ"
+                price={true}
               />
-                   <MainCard
+              <MainCard
                 header="ИНВЕСТИЦИИ"
                 paragraph1="Подготовим все нужные документы"
                 paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
@@ -74,9 +77,10 @@ function Main() {
                 Вам не нужно ходить в налогоовую"
                 //@ts-ignore
                 src={pic06}
-                buttonText='ОСТАВИТЬ ЗАЯВКУ'
+                buttonText="ОСТАВИТЬ ЗАЯВКУ"
+                price={true}
               />
-                   <MainCard
+              <MainCard
                 header="БЕСПЛАТНАЯ РЕГИСТРАЦИЯ ИП И ООО"
                 paragraph1="Подготовим все нужные документы"
                 paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
@@ -84,13 +88,12 @@ function Main() {
                 Вам не нужно ходить в налогоовую"
                 //@ts-ignore
                 src={pic07}
-                buttonText='ОСТАВИТЬ ЗАЯВКУ'
+                buttonText="ОСТАВИТЬ ЗАЯВКУ"
+                price={false}
               />
             </MainWrapper>
           </Col>
         </Row>
-      </Col>
-    </Row>
   );
 }
 
