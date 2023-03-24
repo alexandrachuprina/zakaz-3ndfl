@@ -1,3 +1,6 @@
+# Educational project (trainee position)
+
+## Work in progress
 
 # Educational project (trainee position)
 
