@@ -7,6 +7,7 @@ import {
   Social,
   SocialWrapper,
   Section,
+  Wrapper
 } from "../../styles/Contacts";
 import { InstagramFilled, TwitterCircleFilled } from "@ant-design/icons";
 import MapSection from "../Map";
@@ -15,8 +16,9 @@ function Contacts() {
   return (
     <Row justify={"center"}>
       <Col span={24}>
+        <Wrapper>
         <Row justify={"center"}>
-          <Col span={22} md={18} lg={22}>
+          <Col span={22} md={18} lg={22} xl={20}>
             <Section>
               <Text>
                 <Header>
@@ -73,6 +75,7 @@ function Contacts() {
           </Col>
         </Row>
         <MapSection />
+        </Wrapper>
       </Col>
     </Row>
   );

@@ -10,7 +10,7 @@ function Footer() {
       <Row justify={"center"}>
         <Col span={24}>
           <Row justify={"center"}>
-            <Col span={22} md={18}>
+            <Col span={22} md={18} lg={22} xl={20}>
               <Logo>
                 <Image src={logo} alt="Logo" width={`180`} />
               </Logo>

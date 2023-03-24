@@ -26,6 +26,16 @@ export const SocialWrapper = styled.div`
 `
 export const Section = styled.div`
    @media (min-width: ${queries.lg}) {
-    /* position: absolute; */
+    position: absolute;
+    width: 40vw;
+    z-index: 1;
+    background-color: white;
+    padding: 0 2vh 0 2vh;
+    left: 50vw;
+    margin: 10vh 0 2vh 0;
   }
+`
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
 `

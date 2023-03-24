@@ -13,4 +13,4 @@ function ButtonOrder(props: Props) {
   )
 }
 
-export default ButtonOrder
+export default ButtonOrder;

@@ -32,4 +32,17 @@ export const ButtonOrders = styled.div`
     color: white;
   }
 `
+export const ButtonOrdersLast = styled.div`
+  padding: 1vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  p {
+    padding: 0 0 0 2vh;
+    color: white;
+  }
+`
 
