@@ -1,5 +1,7 @@
 # Educational project (trainee position)
 
+Static landing page with application form.
+
 ## Work in progress
 
 ## Created with:
