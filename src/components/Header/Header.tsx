@@ -45,7 +45,7 @@ const Header = () => {
             </Logo>
             <Phone style={{ color: "white" }}>
               <PhoneFilled />
-              <h2>+7 800 000 00 00</h2>
+              <a href="tel:+78000000000"><h2>+7 800 000 00 00</h2></a> 
             </Phone>
             <ButtonWrapper>
               <ButtonWhatsWhite />

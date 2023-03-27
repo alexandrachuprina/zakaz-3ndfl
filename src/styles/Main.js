@@ -5,7 +5,7 @@ import { colors } from "../assets/colors";
 export const MainWrapper = styled.div`
   display: grid;
   padding: 4vh 0vh 4vh 0;
-  margin-bottom: 5%;
+  /* margin-bottom: 5%; */
 
   @media (min-width: 1000px) {
     display: grid;
