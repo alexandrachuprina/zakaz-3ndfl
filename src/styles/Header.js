@@ -6,6 +6,12 @@ import Image from "next/image";
 
 export const HeadWrapper = styled.div`
   background-color: ${colors.darkGray};
+  /* background-image: ${background};
+  width: 100vw;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content; */
 
   @media (min-width: ${queries.lg}) {
     height: 100vh;

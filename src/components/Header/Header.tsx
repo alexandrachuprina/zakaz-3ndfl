@@ -25,18 +25,24 @@ const Header = () => {
   return (
     <HeadWrapper>
       <Row justify="center">
-        {/* <Image
+
+        {/* <div style={{
+          zIndex: "-1",
+          width: '100vw',
+          height: '100vh',
+          position: 'absolute',
+        }}>
+          <Image
             src={background}
             alt="background"
             style={{
-              position: "absolute",
               width: "100%",
               height: "100%",
-              zIndex: "-1",
               objectFit: "cover",
               backgroundSize: "cover",
             }}
-          /> */}
+          />
+        </div> */}
 
         <Col span={22} md={18} lg={22} xl={20}>
           <Navbar>
@@ -45,7 +51,9 @@ const Header = () => {
             </Logo>
             <Phone style={{ color: "white" }}>
               <PhoneFilled />
-              <a href="tel:+78000000000"><h2>+7 800 000 00 00</h2></a> 
+              <a href="tel:+78000000000">
+                <h2>+7 800 000 00 00</h2>
+              </a>
             </Phone>
             <ButtonWrapper>
               <ButtonWhatsWhite />
@@ -60,13 +68,15 @@ const Header = () => {
                 </h1>
                 <h2>Бесплатная консультация специалиста</h2>
                 <h2>Оплата после выполнения</h2>
-                <h2>Сопровождение до завершения проверки <br/> декларации</h2>
+                <h2>
+                  Сопровождение до завершения проверки <br /> декларации
+                </h2>
               </Text>
 
-                <HeaderForm
-                  header="Заполните заявку и мы свяжемся с Вами в ближайшее время!"
-                  button={false}
-                />
+              <HeaderForm
+                header="Заполните заявку и мы свяжемся с Вами в ближайшее время!"
+                button={false}
+              />
             </MainSection>
           </Wrapper>
         </Col>
