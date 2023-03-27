@@ -3,8 +3,9 @@ import { queries } from "../assets/queries";
 import { colors } from "../assets/colors";
 
 export const MainWrapper = styled.div`
-display: grid;
+  display: grid;
   padding: 4vh 0vh 4vh 0;
+  margin-bottom: 5%;
 
   @media (min-width: 1000px) {
     display: grid;
@@ -16,6 +17,8 @@ display: grid;
   @media (min-width: ${queries.xl}) {
     display: grid;
     grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 85vh;
+    row-gap: 5%;
     column-gap: 5%;
   }
 `
