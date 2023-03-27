@@ -27,7 +27,7 @@ function OrderForm() {
                 <HeaderForm
                   header="Закажите бесплатную консультацию"
                   button={true}
-                  text="Напите нам в WhatsApp"
+                  text="Напишите нам в WhatsApp"
                 />
               </Wrapper>
             </Col>

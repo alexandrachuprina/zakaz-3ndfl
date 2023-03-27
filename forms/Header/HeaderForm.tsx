@@ -17,7 +17,7 @@ function HeaderForm(props: Props) {
     <CardWrapper>
       <Card>
         <InputHeader>
-          <p>{props.header}</p>
+          <h2>{props.header}</h2>
         </InputHeader>
         <p>Телефон для связи</p>
 

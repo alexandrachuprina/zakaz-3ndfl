@@ -20,6 +20,7 @@ export const MainWrapper = styled.div`
     grid-template-rows: 85vh;
     row-gap: 5%;
     column-gap: 5%;
+    margin-bottom: 5%;
   }
 `
 export const CardWrapper = styled.div`

@@ -16,7 +16,7 @@ export const ImageWrapper = styled.div`
     height: 70vh;
   }
   @media (min-width: ${queries.xl}) {
-    height: 90vh;
+    height: 75vh;
   }
 `
 export const Wrapper = styled.div`

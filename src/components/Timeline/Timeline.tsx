@@ -5,7 +5,7 @@ import { Row, Col } from "antd";
 
 function Timeline() {
   return (
-    <Row justify={"center"}>
+    <Row justify={"center"} style={{paddingBottom: '4vh'}}>
       <Col span={24}>
         <Row justify={"center"}>
           <Col span={22} md={18} lg={22} xl={20}>
