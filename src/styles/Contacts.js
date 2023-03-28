@@ -18,6 +18,7 @@ export const Social = styled.div`
   padding-right: 2vh;
   p {
     padding-left: 1vh;
+    margin: 0;
   }
 `;
 export const SocialWrapper = styled.div`
@@ -38,4 +39,8 @@ export const Section = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
+  
+  @media (min-width: ${queries.lg}) {
+    width: 450px;
+  }
 `;

@@ -63,15 +63,7 @@ export const MainSection = styled.div`
     margin: 190px 0 0 0;
   }
 `;
-// export const Wrapper = styled.div`
-//   @media (min-width: ${queries.lg}) {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     width: 100%;
-//     height: 90vh;
-//   }
-// `;
+
 export const Text = styled.div`
   h1,
   h2 {

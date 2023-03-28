@@ -10,7 +10,6 @@ import {
   Phone,
   Text,
   MainSection,
-  // Wrapper,
   HeadWrapper,
   ButtonWrapper,
 } from "../../styles/Header";
@@ -25,7 +24,6 @@ const Header = () => {
   return (
     <HeadWrapper>
       <Row justify="center">
-
         <Col span={22} md={18} lg={22} xl={20}>
           <Navbar>
             <Logo>
@@ -42,25 +40,23 @@ const Header = () => {
             </ButtonWrapper>
           </Navbar>
 
-          {/* <Wrapper> */}
-            <MainSection>
-              <Text>
-                <h1>
-                  Заполним декларацию <br /> 3-НДФЛ
-                </h1>
-                <h2>Бесплатная консультация специалиста</h2>
-                <h2>Оплата после выполнения</h2>
-                <h2>
-                  Сопровождение до завершения проверки <br /> декларации
-                </h2>
-              </Text>
+          <MainSection>
+            <Text>
+              <h1>
+                Заполним декларацию <br /> 3-НДФЛ
+              </h1>
+              <h2>Бесплатная консультация специалиста</h2>
+              <h2>Оплата после выполнения</h2>
+              <h2>
+                Сопровождение до завершения проверки <br /> декларации
+              </h2>
+            </Text>
 
-              <HeaderForm
-                header="Заполните заявку и мы свяжемся с Вами в ближайшее время!"
-                button={false}
-              />
-            </MainSection>
-          {/* </Wrapper> */}
+            <HeaderForm
+              header="Заполните заявку и мы свяжемся с Вами в ближайшее время!"
+              button={false}
+            />
+          </MainSection>
         </Col>
       </Row>
     </HeadWrapper>
