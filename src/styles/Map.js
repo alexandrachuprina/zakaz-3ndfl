@@ -5,6 +5,9 @@ export const MapWrapper = styled.div`
   height: 35vh;
 
   @media (min-width: ${queries.lg}) {
-    height: 90vh;
+    height: 730px;
+  }
+  @media (min-width: ${queries.xl}) {
+    height: 730px;
   }
 `;

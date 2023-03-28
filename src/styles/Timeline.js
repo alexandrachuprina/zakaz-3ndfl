@@ -9,40 +9,28 @@ export const Symbols = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 2vw;
-  /* padding-top: 2vh; */
+  padding-right: 16px;
 `;
 export const Text = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0 0 3vh 0;
+
   h2 {
     padding-bottom: 1vh;
-  }
-
-  @media (min-width: ${queries.xl}) {
-    height: 15vh;
   }
 `;
 export const Circle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10vw;
-  height: 10vw;
   border-radius: 50%;
   background-color: black;
+  width: 40px;
+  height: 40px;
   p {
     color: white;
-  }
-
-  @media (min-width: ${queries.sm}) {
-    width: 4vw;
-    height: 4vw;
-  }
-  @media (min-width: ${queries.lg}) {
-    width: 3vw;
-    height: 3vw;
+    margin: 0;
   }
 `;
 export const Line = styled.div`
@@ -50,11 +38,14 @@ export const Line = styled.div`
   width: 2px;
   background-color: black;
 
-  @media (min-width: ${queries.sm}) {
+  @media (min-width: ${queries.xs}) {
     height: 90%;
   }
+  @media (min-width: ${queries.sm}) {
+    height: 77%;
+  }
   @media (min-width: ${queries.lg}) {
-    height: 80%;
+    height: 62%;
   }
   @media (min-width: ${queries.xl}) {
     height: 70%;

@@ -28,12 +28,12 @@ export const SocialWrapper = styled.div`
 export const Section = styled.div`
   @media (min-width: ${queries.lg}) {
     position: absolute;
-    width: 40vw;
     z-index: 1;
     background-color: white;
     padding: 0 2vh 0 2vh;
     left: 50vw;
     margin: 20px 0 0 0;
+    width: 400px;
   }
 `;
 export const Wrapper = styled.div`
@@ -41,6 +41,5 @@ export const Wrapper = styled.div`
   flex-direction: column;
   
   @media (min-width: ${queries.lg}) {
-    width: 450px;
   }
 `;
