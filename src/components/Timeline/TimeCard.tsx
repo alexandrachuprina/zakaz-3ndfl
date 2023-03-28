@@ -1,5 +1,12 @@
 import React from "react";
-import { Wrapper, Circle, Line, Text, Symbols, NoLine } from "@/src/styles/Timeline";
+import {
+  Wrapper,
+  Circle,
+  Line,
+  Text,
+  Symbols,
+  NoLine,
+} from "@/src/styles/Timeline";
 import { Row, Col } from "antd";
 
 interface Props {

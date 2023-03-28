@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { colors } from '../assets/colors'
+import { colors } from "../assets/colors";
 
 export const Section = styled.div`
   background-color: ${colors.lightGray};
-`
+`;
 export const Wrapper = styled.div`
   padding: 4vh 0 4vh 0;
-`
+`;
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,4 +16,4 @@ export const Header = styled.div`
   p {
     font-size: 1rem;
   }
-`
+`;

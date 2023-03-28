@@ -11,13 +11,13 @@ const ButtonWhats = styled.div`
   p {
     padding: 0 0 0 2vh;
   }
-`
+`;
 export const ButtonWhatsW = styled(ButtonWhats)`
   border: 1px solid white;
-`
+`;
 export const ButtonWhatsB = styled(ButtonWhats)`
   border: 1px solid black;
-`
+`;
 export const ButtonOrders = styled.div`
   margin-bottom: 2vh;
   padding: 1vh;
@@ -31,7 +31,7 @@ export const ButtonOrders = styled.div`
     padding: 0 0 0 2vh;
     color: white;
   }
-`
+`;
 export const ButtonOrdersLast = styled.div`
   padding: 1vh;
   width: 100%;
@@ -44,5 +44,4 @@ export const ButtonOrdersLast = styled.div`
     padding: 0 0 0 2vh;
     color: white;
   }
-`
-
+`;

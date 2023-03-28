@@ -4,7 +4,7 @@ import { colors } from "../assets/colors";
 
 export const Section = styled.div`
   background-color: ${colors.lightGray};
-`
+`;
 export const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -18,7 +18,7 @@ export const ImageWrapper = styled.div`
   @media (min-width: ${queries.xl}) {
     height: 75vh;
   }
-`
+`;
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,4 +27,4 @@ export const Wrapper = styled.div`
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-`
+`;

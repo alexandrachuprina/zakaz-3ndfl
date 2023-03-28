@@ -20,9 +20,9 @@ export default function Home() {
       <Timeline />
       <DocsList />
       <OrderForm />
-      <Contacts/>
+      <Contacts />
       {/* <MapSection/> */}
-      <Footer/>
+      <Footer />
     </>
   );
 }

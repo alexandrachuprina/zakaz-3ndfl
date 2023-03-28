@@ -22,29 +22,29 @@ export const MainWrapper = styled.div`
     column-gap: 5%;
     margin-bottom: 5%;
   }
-`
+`;
 export const CardWrapper = styled.div`
   padding: 3vh 0 3vh 0;
   display: flex;
   flex-direction: column;
-`
+`;
 export const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 25vh;
   padding-bottom: 2vh;
-`
+`;
 export const TextWrapper = styled.div`
   padding-bottom: 2vh;
-`
+`;
 export const Price = styled.div`
   margin: 2vh 0 2vh 0;
   display: inline-block;
   box-sizing: border-box;
   background-color: ${colors.yellow};
   color: black;
-`
+`;
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,8 +53,7 @@ export const Header = styled.div`
   h2 {
     padding-bottom: 2vh;
   }
-`
+`;
 export const ButtonsWrapper = styled.div`
   margin-top: auto;
-`
-
+`;

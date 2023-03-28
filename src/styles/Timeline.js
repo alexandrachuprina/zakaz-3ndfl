@@ -4,14 +4,14 @@ import { queries } from "../assets/queries";
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-`
+`;
 export const Symbols = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-right: 2vw;
   /* padding-top: 2vh; */
-`
+`;
 export const Text = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ export const Text = styled.div`
   @media (min-width: ${queries.xl}) {
     height: 15vh;
   }
-`
+`;
 export const Circle = styled.div`
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ export const Circle = styled.div`
     width: 3vw;
     height: 3vw;
   }
-`
+`;
 export const Line = styled.div`
   height: 100%;
   width: 2px;
@@ -59,5 +59,5 @@ export const Line = styled.div`
   @media (min-width: ${queries.xl}) {
     height: 70%;
   }
-`
-export const NoLine = styled.div``
+`;
+export const NoLine = styled.div``;

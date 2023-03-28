@@ -25,7 +25,6 @@ const Header = () => {
   return (
     <HeadWrapper>
       <Row justify="center">
-
         {/* <div style={{
           zIndex: "-1",
           width: '100vw',

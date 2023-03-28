@@ -5,11 +5,19 @@ import { Row, Col } from "antd";
 
 function Timeline() {
   return (
-    <Row justify={"center"} style={{paddingBottom: '4vh'}}>
+    <Row justify={"center"} style={{ paddingBottom: "4vh" }}>
       <Col span={24}>
         <Row justify={"center"}>
           <Col span={22} md={18} lg={22} xl={20}>
-            <h1 style={{display: 'flex', justifyContent: 'center', margin: '4vh 0 4vh 0'}}>Как мы работаем</h1>
+            <h1
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                margin: "4vh 0 4vh 0",
+              }}
+            >
+              Как мы работаем
+            </h1>
             <Wrapper>
               <TimeCard
                 number={1}
