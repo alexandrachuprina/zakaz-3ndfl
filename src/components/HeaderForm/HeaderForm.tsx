@@ -1,7 +1,11 @@
 import React from "react";
 
 import { Button, Form, Input, Select } from "antd";
-import { InputHeader, CardWrapper, Card } from "../styles/HeaderForm";
+import {
+  InputHeader,
+  CardWrapper,
+  Card,
+} from "../../styles/HeaderForm";
 import ButtonWhatsBlack from "@/src/components/Buttons/ButtonWhatsUpBlack";
 
 const { Option } = Select;
@@ -17,7 +21,7 @@ function HeaderForm(props: Props) {
     <CardWrapper>
       <Card>
         <InputHeader>
-          <h2>{props.header}</h2>
+          <p>{props.header}</p>
         </InputHeader>
         <p>Телефон для связи</p>
 
@@ -55,7 +59,7 @@ function HeaderForm(props: Props) {
             <Option value="professional">Профессиональный вычет</Option>
           </Select>
 
-          <Form.Item style={{ paddingTop: "4vw" }}>
+          <Form.Item style={{ paddingTop: "24px", marginBottom: 0, }}>
             <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
               <p>Заказать</p>
             </Button>

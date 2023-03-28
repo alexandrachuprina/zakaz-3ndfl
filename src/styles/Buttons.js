@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { queries } from "../assets/queries";
 
 const ButtonWhats = styled.div`
-  padding: 1vh;
+  padding: 10px 30px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -10,6 +10,14 @@ const ButtonWhats = styled.div`
   align-items: center;
   p {
     padding: 0 0 0 2vh;
+    margin: 0;
+  }
+
+  @media (min-width: ${queries.sm}) {
+    padding: 10px 36px;
+  }
+  @media (min-width: ${queries.lg}) {
+    padding: 10px 36px;
   }
 `;
 export const ButtonWhatsW = styled(ButtonWhats)`
@@ -30,6 +38,7 @@ export const ButtonOrders = styled.div`
   p {
     padding: 0 0 0 2vh;
     color: white;
+    margin: 0;
   }
 `;
 export const ButtonOrdersLast = styled.div`
@@ -43,5 +52,6 @@ export const ButtonOrdersLast = styled.div`
   p {
     padding: 0 0 0 2vh;
     color: white;
+    margin: 0;
   }
 `;

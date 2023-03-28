@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "antd";
-import HeaderForm from "@/forms/Header";
+import HeaderForm from "@/src/components/HeaderForm";
 import Image from "next/image";
 import { ImageWrapper, Section, Wrapper } from "@/src/styles/OrderForm";
 import icon from "../../assets/OrderForm/icon.svg";

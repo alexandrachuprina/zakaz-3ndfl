@@ -15,7 +15,7 @@ import {
   ButtonWrapper,
 } from "../../styles/Header";
 
-import HeaderForm from "@/forms/Header";
+import HeaderForm from "@/src/components/HeaderForm";
 import ButtonWhatsWhite from "../Buttons/ButtonWhatsUpWhite";
 
 import logo from "../../assets/Header/logo.svg";
@@ -25,23 +25,6 @@ const Header = () => {
   return (
     <HeadWrapper>
       <Row justify="center">
-        {/* <div style={{
-          zIndex: "-1",
-          width: '100vw',
-          height: '100vh',
-          position: 'absolute',
-        }}>
-          <Image
-            src={background}
-            alt="background"
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              backgroundSize: "cover",
-            }}
-          />
-        </div> */}
 
         <Col span={22} md={18} lg={22} xl={20}>
           <Navbar>

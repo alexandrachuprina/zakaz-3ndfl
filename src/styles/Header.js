@@ -42,6 +42,7 @@ export const Phone = styled.div`
   align-items: center;
   h2 {
     padding: 0 0 0 2vh;
+    margin: 0;
   }
 `;
 export const MainSection = styled.div`
@@ -70,15 +71,39 @@ export const Text = styled.div`
   h1,
   h2 {
     color: white;
-    padding-bottom: 2vh;
+  }
+
+  @media (min-width: ${queries.xs}) {
+    margin-bottom: 16px;
+    h1 {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 44px;
+      width: 244px;
+      padding-bottom: 16px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      width: 288px;
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (min-width: ${queries.sm}) {
+    h1,
+    h2 {
+      width: 502px;
+    }
   }
 
   @media (min-width: ${queries.lg}) {
     h1 {
-      padding-bottom: 8vh;
+      padding-bottom: 60px;
     }
     h2 {
-      padding-bottom: 3vh;
+      padding-bottom: 27px;
     }
   }
 `;

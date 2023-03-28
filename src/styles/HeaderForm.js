@@ -8,7 +8,8 @@ export const CardWrapper = styled.div`
   margin-bottom: 4vh;
 
   @media (min-width: ${queries.lg}) {
-    width: 40vw;
+    width: 400px;
+    height: 400px;
     margin: 0;
   }
 `;
@@ -16,8 +17,20 @@ export const Card = styled.div`
   width: 100%;
   background-color: white;
   box-sizing: border-box;
-  padding: 4vw 4vw 4vw 4vw;
+  padding: 16px;
+  
+  @media (min-width: ${queries.lg}) {
+    padding: 30px;
+  }
 `;
 export const InputHeader = styled.div`
-  padding-bottom: 4vw;
+  padding-bottom: 24px;
+
+  @media (min-width: ${queries.sm}) {
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
 `;

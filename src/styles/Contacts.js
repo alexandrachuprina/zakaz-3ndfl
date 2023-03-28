@@ -32,7 +32,7 @@ export const Section = styled.div`
     background-color: white;
     padding: 0 2vh 0 2vh;
     left: 50vw;
-    margin: 10vh 0 2vh 0;
+    margin: 20px 0 0 0;
   }
 `;
 export const Wrapper = styled.div`
