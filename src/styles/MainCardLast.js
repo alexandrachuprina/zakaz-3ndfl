@@ -3,7 +3,7 @@ import { queries } from "../assets/queries";
 import { colors } from "../assets/colors";
 
 export const CardWrapper = styled.div`
-  padding: 0 0 3vh 0;
+  margin-top: 64px;
   display: flex;
   flex-direction: column;
 
@@ -12,6 +12,7 @@ export const CardWrapper = styled.div`
     justify-content: space-between;
   }
 `;
+
 export const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;

@@ -48,25 +48,30 @@ export const Phone = styled.div`
 export const MainSection = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0;
+  /* margin: 77px 0 0 0; */
 
   @media (min-width: ${queries.lg}) {
+    margin: 77px 0 0 0;
     flex-direction: row;
     align-self: center;
     justify-content: space-between;
   }
 
-  @media (max-width: ${queries.xl}) {
+  @media (min-width: ${queries.xl}) {
     justify-content: space-between;
+    align-self: center;
+    margin: 190px 0 0 0;
   }
 `;
-export const Wrapper = styled.div`
-  @media (min-width: ${queries.lg}) {
-    height: 90vh;
-    width: 100%;
-    padding-top: 10vh;
-  }
-`;
+// export const Wrapper = styled.div`
+//   @media (min-width: ${queries.lg}) {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     width: 100%;
+//     height: 90vh;
+//   }
+// `;
 export const Text = styled.div`
   h1,
   h2 {
@@ -108,3 +113,4 @@ export const Text = styled.div`
   }
 `;
 export const ButtonWrapper = styled.div``;
+

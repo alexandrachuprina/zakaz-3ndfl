@@ -10,7 +10,7 @@ import {
   Phone,
   Text,
   MainSection,
-  Wrapper,
+  // Wrapper,
   HeadWrapper,
   ButtonWrapper,
 } from "../../styles/Header";
@@ -42,7 +42,7 @@ const Header = () => {
             </ButtonWrapper>
           </Navbar>
 
-          <Wrapper>
+          {/* <Wrapper> */}
             <MainSection>
               <Text>
                 <h1>
@@ -60,7 +60,7 @@ const Header = () => {
                 button={false}
               />
             </MainSection>
-          </Wrapper>
+          {/* </Wrapper> */}
         </Col>
       </Row>
     </HeadWrapper>

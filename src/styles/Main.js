@@ -3,48 +3,61 @@ import { queries } from "../assets/queries";
 import { colors } from "../assets/colors";
 
 export const MainWrapper = styled.div`
-  display: grid;
-  padding: 4vh 0vh 4vh 0;
-  /* margin-bottom: 5%; */
+  /* display: grid;
+  width: 100%; */
 
-  @media (min-width: 1000px) {
+  @media (min-width: ${queries.lg}) {
+    margin-top: 100px;
     display: grid;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: 100vh;
+    width: 100%;
+    grid-template-columns:repeat(2, 45%);
+    grid-template-rows: 700px;
     column-gap: 10%;
+    row-gap: 120px;
   }
 
   @media (min-width: ${queries.xl}) {
+    margin-top: 100px;
     display: grid;
-    grid-template-columns: repeat(3, 30%);
-    grid-template-rows: 85vh;
-    row-gap: 5%;
+    width: 100%;
+    grid-template-columns:repeat(3, 30%);
+    grid-template-rows: 700px;
     column-gap: 5%;
-    margin-bottom: 5%;
+    row-gap: 120px;
   }
+
 `;
+
 export const CardWrapper = styled.div`
-  padding: 3vh 0 3vh 0;
+  margin-top: 64px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: ${queries.lg}) {
+    height: 700px;
+    margin-top: 0;
+  }
 `;
+
 export const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 25vh;
-  padding-bottom: 2vh;
+  height: 200px;
 `;
+
 export const TextWrapper = styled.div`
-  padding-bottom: 2vh;
+  padding: 15px 0 15px 0;
 `;
+
 export const Price = styled.div`
-  margin: 2vh 0 2vh 0;
+  margin: 15px 0 30px 0;
   display: inline-block;
   box-sizing: border-box;
   background-color: ${colors.yellow};
   color: black;
 `;
+
 export const Header = styled.div`
   display: flex;
   flex-direction: column;

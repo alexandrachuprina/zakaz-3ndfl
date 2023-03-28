@@ -14,29 +14,32 @@ import pic06 from "../../assets/Main/pic06.svg";
 import pic07 from "../../assets/Main/pic07.svg";
 
 function Main() {
+  // console.log(window.innerWidth)
   return (
-    <Row justify={"center"}>
-      <Col span={22} md={18} lg={16} xl={20}>
+    <Row justify={"center"} wrap={true}>
+      <Col span={22} md={20} lg={18} xl={20}>
         <MainWrapper>
-          <MainCard
-            header="КУПИЛИ НЕДВИЖИМОСТЬ?"
-            paragraph1="Вы приобрели недвижимость (квартира, дом, комната, земельный участок с домом)?"
-            paragraph2="Вы можете вернуть до 260 000 рублей с суммы, уплаченной за вашу квартиру или дом, 
+            <MainCard
+              header="КУПИЛИ НЕДВИЖИМОСТЬ?"
+              paragraph1="Вы приобрели недвижимость (квартира, дом, комната, земельный участок с домом)?"
+              paragraph2="Вы можете вернуть до 260 000 рублей с суммы, уплаченной за вашу квартиру или дом, 
                 а также можете вернуть до 390 000 рублей с уплаченных процентов по ипотеке."
-            //@ts-ignore
-            src={pic01}
-            buttonText="ЗАКАЗАТЬ"
-            price={true}
-          />
-          <MainCard
-            header="ОПЛАТИЛИ ОБУЧЕНИЕ?"
-            paragraph1="Вы заплатили за свое обучение, за своих детей, или братьев, сестер?"
-            paragraph2="Вы имеете право получить 13% от сумм, затраченных Вами на обучение."
-            //@ts-ignore
-            src={pic02}
-            buttonText="ЗАКАЗАТЬ"
-            price={true}
-          />
+              //@ts-ignore
+              src={pic01}
+              buttonText="ЗАКАЗАТЬ"
+              price={true}
+            />
+        
+            <MainCard
+              header="ОПЛАТИЛИ ОБУЧЕНИЕ?"
+              paragraph1="Вы заплатили за свое обучение, за своих детей, или братьев, сестер?"
+              paragraph2="Вы имеете право получить 13% от сумм, затраченных Вами на обучение."
+              //@ts-ignore
+              src={pic02}
+              buttonText="ЗАКАЗАТЬ"
+              price={true}
+            />
+
           <MainCard
             header="ОПЛАТИЛИ ЛЕЧЕНИЕ?"
             paragraph1="Вы приобрели недвижимость (квартира, дом, комната, земельный участок с домом)?"
@@ -47,6 +50,7 @@ function Main() {
             buttonText="ЗАКАЗАТЬ"
             price={true}
           />
+
           <MainCard
             header="ДОПОЛНИТЕЛЬНЫЙ ДОХОД"
             paragraph1="Подготовим все нужные документы"
@@ -58,6 +62,7 @@ function Main() {
             buttonText="ОСТАВИТЬ ЗАЯВКУ"
             price={true}
           />
+
           <MainCard
             header="СТРАХОВАНИЕ"
             paragraph1="Подготовим все нужные документы"
@@ -69,6 +74,7 @@ function Main() {
             buttonText="ОСТАВИТЬ ЗАЯВКУ"
             price={true}
           />
+
           <MainCard
             header="ИНВЕСТИЦИИ"
             paragraph1="Подготовим все нужные документы"
@@ -81,6 +87,7 @@ function Main() {
             price={true}
           />
         </MainWrapper>
+
         <MainCardLast
           header="БЕСПЛАТНАЯ РЕГИСТРАЦИЯ ИП И ООО"
           paragraph1="Подготовим все нужные документы"
