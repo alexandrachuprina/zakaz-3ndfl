@@ -9,7 +9,6 @@ import { MainWrapper } from "../../styles/Main";
 import pic01 from "../../assets/Main/pic01.svg";
 import pic02 from "../../assets/Main/pic02.svg";
 import pic03 from "../../assets/Main/pic03.svg";
-import pic04 from "../../assets/Main/pic04.svg";
 import pic05 from "../../assets/Main/pic05.svg";
 import pic06 from "../../assets/Main/pic06.svg";
 import pic07 from "../../assets/Main/pic07.svg";
@@ -55,7 +54,7 @@ function Main() {
                 Вы не платите госпошлину 800 ₽
                 Вам не нужно ходить в налогоовую"
             //@ts-ignore
-            src={pic04}
+            src={pic05}
             buttonText="ОСТАВИТЬ ЗАЯВКУ"
             price={true}
           />
