@@ -13,8 +13,7 @@ import ButtonOrder from "../Buttons/ButtonOrder";
 
 interface Props {
   header: string;
-  paragraph1: string;
-  paragraph2: string;
+  paragraph: string;
   src: string;
   buttonText: string;
   price: boolean;
@@ -37,9 +36,8 @@ function MainCard(props: Props) {
         <Header>
           <h2>{props.header}</h2>
         </Header>
-        <p>{props.paragraph1}</p>
+        <p>{props.paragraph}</p>
         <br />
-        <p>{props.paragraph2}</p>
         {props.price ? (
           <Price>
             <p>300 ₽</p>

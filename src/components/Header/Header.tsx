@@ -30,7 +30,6 @@ const Header = () => {
     // console.log(info)
     setMyData(info);
   })
-  
 
   return (
     <HeadWrapper>
