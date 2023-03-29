@@ -43,7 +43,7 @@ function DocCard(props: Props) {
         <Panel header={props.header6} key="6">
           <p>{props.paragraph6}</p>
         </Panel>
-        <Panel header={props.header7} key="6">
+        <Panel header={props.header7} key="7">
           <p>{props.paragraph7}</p>
         </Panel>
       </Collapse>

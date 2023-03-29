@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import Image from "next/image";
 
 import { Col, Row } from "antd";
@@ -21,6 +22,16 @@ import logo from "../../assets/Header/logo.svg";
 import background from "../../assets/Header/background.jpg";
 
 const Header = () => {
+  const [myData, setMyData] = useState<any>([]);
+
+  axios.get<any>("http://localhost:1337/api/block1")
+  .then((response) => {
+    const info = response.data.data.attributes;
+    // console.log(info)
+    setMyData(info);
+  })
+  
+
   return (
     <HeadWrapper>
       <Row justify="center">
@@ -31,8 +42,8 @@ const Header = () => {
             </Logo>
             <Phone style={{ color: "white" }}>
               <PhoneFilled />
-              <a href="tel:+78000000000">
-                <h2>+7 800 000 00 00</h2>
+              <a href={`tel:${myData.Tel}`}>
+                <h2>{myData.Tel}</h2>
               </a>
             </Phone>
             <ButtonWrapper>
@@ -42,9 +53,7 @@ const Header = () => {
 
           <MainSection>
             <Text>
-              <h1>
-                Заполним декларацию <br /> 3-НДФЛ
-              </h1>
+              <h1>{myData.Header}</h1>
               <h2>Бесплатная консультация специалиста</h2>
               <h2>Оплата после выполнения</h2>
               <h2>
@@ -53,7 +62,7 @@ const Header = () => {
             </Text>
 
             <HeaderForm
-              header="Заполните заявку и мы свяжемся с Вами в ближайшее время!"
+              header={myData.FormHeader}
               button={false}
             />
           </MainSection>
