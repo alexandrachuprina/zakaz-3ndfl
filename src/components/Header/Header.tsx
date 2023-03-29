@@ -1,30 +1,66 @@
-import React from 'react';
+import React, { useState } from "react";
+import Image from "next/image";
 
-import { StyledHeader } from '../../../styles/Header/Header';
-import { StyledNavbar } from '../../../styles/Header/Navbar';
+import { Col, Row } from "antd";
+import { PhoneFilled } from "@ant-design/icons";
 
-import Logo from '../../assets/Header/logo.svg'
+import {
+  Logo,
+  Navbar,
+  Phone,
+  Text,
+  MainSection,
+  HeadWrapper,
+  ButtonWrapper,
+} from "../../styles/Header";
 
-// export default function Header() {
-//   return (
-//     <StyledHeader>
-//       <StyledNavbar>
-//         <Logo width="200" height="200"/>
-//         <p>Hello</p>
-//       </StyledNavbar>
-//     </StyledHeader>
-//   )
-// }
+import HeaderForm from "@/src/components/HeaderForm";
+import ButtonWhatsWhite from "../Buttons/ButtonWhatsUpWhite";
+
+import logo from "../../assets/Header/logo.svg";
+import background from "../../assets/Header/background.jpg";
 
 const Header = () => {
   return (
-    <StyledHeader>
-      <StyledNavbar>
-        <Logo width="200" height="200" />
-        <p>Hello</p>
-      </StyledNavbar>
-    </StyledHeader>
-  )
-}
+    <HeadWrapper>
+      <Row justify="center">
+        <Col span={22} md={18} lg={22} xl={20}>
+          <Navbar>
+            <Logo>
+              <Image src={logo} alt="Logo" width={`180`} />
+            </Logo>
+            <Phone style={{ color: "white" }}>
+              <PhoneFilled />
+              <a href="tel:+78000000000">
+                <h2>+7 800 000 00 00</h2>
+              </a>
+            </Phone>
+            <ButtonWrapper>
+              <ButtonWhatsWhite />
+            </ButtonWrapper>
+          </Navbar>
+
+          <MainSection>
+            <Text>
+              <h1>
+                Заполним декларацию <br /> 3-НДФЛ
+              </h1>
+              <h2>Бесплатная консультация специалиста</h2>
+              <h2>Оплата после выполнения</h2>
+              <h2>
+                Сопровождение до завершения проверки <br /> декларации
+              </h2>
+            </Text>
+
+            <HeaderForm
+              header="Заполните заявку и мы свяжемся с Вами в ближайшее время!"
+              button={false}
+            />
+          </MainSection>
+        </Col>
+      </Row>
+    </HeadWrapper>
+  );
+};
 
 export default Header;

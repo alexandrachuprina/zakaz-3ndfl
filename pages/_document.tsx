@@ -1,5 +1,5 @@
-import { Html, Head, Main, NextScript } from 'next/document';
-import Header  from '@/src/components/Header/index';
+import { Html, Head, Main, NextScript } from "next/document";
+import Header from "@/src/components/Header/index";
 
 export default function Document() {
   return (
@@ -8,9 +8,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-
-        <Header />
       </body>
     </Html>
-  )
+  );
 }
