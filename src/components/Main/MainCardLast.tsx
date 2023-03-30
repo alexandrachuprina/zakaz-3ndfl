@@ -25,10 +25,12 @@ function MainCardLast(props: Props) {
         <Image
           src={props.src}
           alt={props.header}
-          style={{
-            width: "auto",
-            height: "100%",
-          }}
+          width={200}
+          height={200}
+          // style={{
+          //   width: "auto",
+          //   height: "100%",
+          // }}
         />
       </ImageWrapper>
       <TextWrapper>

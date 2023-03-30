@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
 
@@ -23,13 +23,36 @@ import background from "../../assets/Header/background.jpg";
 
 const Header = () => {
   const [myData, setMyData] = useState<any>([]);
+  const [subheaders, setSubheaders] = useState<any>([]);
 
-  axios.get<any>("http://localhost:1337/api/block1")
-  .then((response) => {
-    const info = response.data.data.attributes;
-    // console.log(info)
-    setMyData(info);
-  })
+  useEffect(() => {
+    axios
+      .get("http://localhost:1337/api/block1?populate=*")
+      .then((response: any) => {
+        // console.log("response:")
+        // console.log(response)
+
+        const info = response.data.data.attributes;
+        // console.log('info:')
+        // console.log(info)
+
+        setMyData(info);
+
+        if (response.status === 200) {
+          const text: any = info.subheaders;
+          // console.log('text:')
+          // console.log(text)
+
+          if (text) {
+            const subheaders: any = text.data;
+            // console.log('subheaders:')
+            // console.log(subheaders)
+
+            setSubheaders(subheaders)
+          }
+        }
+      })
+  }, []);
 
   return (
     <HeadWrapper>
@@ -53,17 +76,12 @@ const Header = () => {
           <MainSection>
             <Text>
               <h1>{myData.Header}</h1>
-              <h2>Бесплатная консультация специалиста</h2>
-              <h2>Оплата после выполнения</h2>
-              <h2>
-                Сопровождение до завершения проверки <br /> декларации
-              </h2>
+              {subheaders.map((elem: any, i: any) => (
+                <h2 key={i}>{subheaders[i].attributes.works}</h2>
+              ))}
             </Text>
 
-            <HeaderForm
-              header={myData.FormHeader}
-              button={false}
-            />
+            <HeaderForm header={myData.FormHeader} button={false} />
           </MainSection>
         </Col>
       </Row>
