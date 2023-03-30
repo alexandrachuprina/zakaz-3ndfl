@@ -19,7 +19,6 @@ import HeaderForm from "@/src/components/HeaderForm";
 import ButtonWhatsWhite from "../Buttons/ButtonWhatsUpWhite";
 
 import logo from "../../assets/Header/logo.svg";
-import background from "../../assets/Header/background.jpg";
 
 const Header = () => {
   const [myData, setMyData] = useState<any>([]);
@@ -29,25 +28,13 @@ const Header = () => {
     axios
       .get("http://localhost:1337/api/block1?populate=*")
       .then((response: any) => {
-        // console.log("response:")
-        // console.log(response)
-
         const info = response.data.data.attributes;
-        // console.log('info:')
-        // console.log(info)
-
         setMyData(info);
 
         if (response.status === 200) {
           const text: any = info.subheaders;
-          // console.log('text:')
-          // console.log(text)
-
           if (text) {
             const subheaders: any = text.data;
-            // console.log('subheaders:')
-            // console.log(subheaders)
-
             setSubheaders(subheaders)
           }
         }
