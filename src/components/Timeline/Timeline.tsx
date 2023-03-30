@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Wrapper } from "../../styles/Timeline";
 import TimeCard from "./TimeCard";
 import { Row, Col } from "antd";
+import { Titillium_Web } from "next/font/google";
 
 function Timeline() {
+  const [myHeader, setMyHeader] = useState<any>([]);
+  const [cardsData, setCardsData] = useState<any>([]);
+
+  useEffect(() => {
+    axios.get<any>("http://localhost:1337/api/block3").then((response) => {
+      const info = response.data.data;
+      // console.log('info:')
+      // console.log(info)
+      setMyHeader(info);
+    });
+    axios
+      .get<any>("http://localhost:1337/api/block3-lists")
+      .then((response) => {
+        const info = response.data.data;
+        // console.log('info:')
+        // console.log(info)
+        setCardsData(info);
+      });
+  }, []);
+
   return (
     <Row justify={"center"} style={{ paddingBottom: "4vh" }}>
       <Col span={24}>
@@ -16,55 +38,21 @@ function Timeline() {
                 margin: "4vh 0 4vh 0",
               }}
             >
-              Как мы работаем
+              {myHeader.header}
             </h1>
-            <Wrapper>
-              <TimeCard
-                number={1}
-                header="Закажите декларацию 
-        3-НДФЛ"
-                paragraph="Специалист проконсультирует по списку документов, 
-        по возможностям законного уменьшения налога и поможет получить налоговый вычет 
-        максимально выгодно для Вас. "
-                line={true}
-              />
-            </Wrapper>
-            <Wrapper>
-              <TimeCard
-                number={2}
-                header="Пришлите документы"
-                paragraph="Пришлите фотографии документов на WhatsApp, Viber или на электронную почту 
-        nalog.2@mail.ru наш специалист проверит Ваши документы, проконсультирует и заполнит Вашу декларацию 3-НДФЛ."
-                line={true}
-              />
-            </Wrapper>
-            <Wrapper>
-              <TimeCard
-                number={3}
-                header="Получите декларацию 3-НДФЛ на почту"
-                paragraph="Специалист заполненную декларацию 3-НДФЛ пришлет Вам на электронную почту в удобном для Вас формате!"
-                line={true}
-              />
-            </Wrapper>
-            <Wrapper>
-              <TimeCard
-                number={4}
-                header="Оплатите услугу, после получения декларации 
-                3-НДФЛ на вашу почту"
-                paragraph="Оплачиваете услугу только после получения декларации 3-НДФЛ на Вашу электронную почту."
-                line={true}
-              />
-            </Wrapper>
-            <Wrapper>
-              <TimeCard
-                number={5}
-                header="Подайте декларацию 
-                3-НДФЛ или доверьте это нам"
-                paragraph="Подайте декларацию и все необходимые документы к ней в налоговую любым 
-                удобным для Вас способом. Или доверьте это нам, выбрав тариф Всё включено - VIP"
-                line={false}
-              />
-            </Wrapper>
+
+            {cardsData.map((elem: any, i: number) => (
+              <Wrapper>
+                <TimeCard
+                  key={i}
+                  number={i + 1}
+                  header={elem.attributes.header}
+                  paragraph={elem.attributes.description}
+                  line={true}
+                />
+              </Wrapper>
+            ))}
+
           </Col>
         </Row>
       </Col>
