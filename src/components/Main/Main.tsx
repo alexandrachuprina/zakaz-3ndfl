@@ -21,8 +21,8 @@ function Main() {
     });
     axios.get<any>("http://localhost:1337/api/block2-1s?populate=*").then((response) => {
       const info = response.data.data;
-      console.log('info:')
-      console.log(info)
+      // console.log('info:')
+      // console.log(info)
       setLastCard(info);
     });
   }, []);
