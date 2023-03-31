@@ -23,6 +23,7 @@ import logo from "../../assets/Header/logo.svg";
 const Header = () => {
   const [myData, setMyData] = useState<any>([]);
   const [subheaders, setSubheaders] = useState<any>([]);
+  const [image, setImage] = useState<any>();
 
   useEffect(() => {
     axios
@@ -32,14 +33,26 @@ const Header = () => {
         setMyData(info);
 
         if (response.status === 200) {
+          const data = info.logo.data.attributes;
+          const url = data.url;
+          console.log(url)
+          setImage(url);
+        }
+
+        if (response.status === 200) {
           const text: any = info.subheaders;
           if (text) {
             const subheaders: any = text.data;
-            setSubheaders(subheaders)
+            setSubheaders(subheaders);
           }
         }
-      })
+      });
   }, []);
+
+  if (image) {
+    console.log(image)
+  }
+ 
 
   return (
     <HeadWrapper>
@@ -47,7 +60,7 @@ const Header = () => {
         <Col span={22} md={18} lg={22} xl={20}>
           <Navbar>
             <Logo>
-              <Image src={logo} alt="Logo" width={`180`} />
+              {image ? <Image src={`http://localhost:1337${image}`} alt="Logo" width={`180`} height={60}/> : null}
             </Logo>
             <Phone style={{ color: "white" }}>
               <PhoneFilled />

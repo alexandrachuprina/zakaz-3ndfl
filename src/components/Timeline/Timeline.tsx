@@ -3,7 +3,6 @@ import axios from "axios";
 import { Wrapper } from "../../styles/Timeline";
 import TimeCard from "./TimeCard";
 import { Row, Col } from "antd";
-import { Titillium_Web } from "next/font/google";
 
 function Timeline() {
   const [myHeader, setMyHeader] = useState<any>([]);
@@ -48,7 +47,7 @@ function Timeline() {
                   number={i + 1}
                   header={elem.attributes.header}
                   paragraph={elem.attributes.description}
-                  line={true}
+                  line={elem.attributes.line}
                 />
               </Wrapper>
             ))}
