@@ -10,7 +10,7 @@ export const MainWrapper = styled.div`
     margin-top: 100px;
     display: grid;
     width: 100%;
-    grid-template-columns:repeat(2, 45%);
+    grid-template-columns: repeat(2, 45%);
     grid-template-rows: 700px;
     column-gap: 10%;
     row-gap: 120px;
@@ -20,12 +20,11 @@ export const MainWrapper = styled.div`
     margin-top: 100px;
     display: grid;
     width: 100%;
-    grid-template-columns:repeat(3, 30%);
+    grid-template-columns: repeat(3, 30%);
     grid-template-rows: 700px;
     column-gap: 5%;
     row-gap: 120px;
   }
-
 `;
 
 export const CardWrapper = styled.div`

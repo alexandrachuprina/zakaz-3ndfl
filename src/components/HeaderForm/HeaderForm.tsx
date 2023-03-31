@@ -1,11 +1,7 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 
 import { Button, Form, Input, Select } from "antd";
-import {
-  InputHeader,
-  CardWrapper,
-  Card,
-} from "../../styles/HeaderForm";
+import { InputHeader, CardWrapper, Card } from "../../styles/HeaderForm";
 import ButtonWhatsBlack from "@/src/components/Buttons/ButtonWhatsUpBlack";
 import axios from "axios";
 
@@ -60,7 +56,7 @@ function HeaderForm(props: Props) {
             <Option value="professional">Профессиональный вычет</Option>
           </Select>
 
-          <Form.Item style={{ paddingTop: "24px", marginBottom: 0, }}>
+          <Form.Item style={{ paddingTop: "24px", marginBottom: 0 }}>
             <Button type="primary" htmlType="submit" style={{ width: "100%" }}>
               <p>Заказать</p>
             </Button>

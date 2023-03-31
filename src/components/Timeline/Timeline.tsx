@@ -51,7 +51,6 @@ function Timeline() {
                 />
               </Wrapper>
             ))}
-
           </Col>
         </Row>
       </Col>

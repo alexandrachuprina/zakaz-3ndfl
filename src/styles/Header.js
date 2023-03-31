@@ -105,4 +105,3 @@ export const Text = styled.div`
   }
 `;
 export const ButtonWrapper = styled.div``;
-

@@ -35,7 +35,7 @@ const Header = () => {
         if (response.status === 200) {
           const data = info.logo.data.attributes;
           const url = data.url;
-          console.log(url)
+          console.log(url);
           setImage(url);
         }
 
@@ -50,9 +50,8 @@ const Header = () => {
   }, []);
 
   if (image) {
-    console.log(image)
+    console.log(image);
   }
- 
 
   return (
     <HeadWrapper>
@@ -60,7 +59,14 @@ const Header = () => {
         <Col span={22} md={18} lg={22} xl={20}>
           <Navbar>
             <Logo>
-              {image ? <Image src={`http://localhost:1337${image}`} alt="Logo" width={`180`} height={60}/> : null}
+              {image ? (
+                <Image
+                  src={`http://localhost:1337${image}`}
+                  alt="Logo"
+                  width={`180`}
+                  height={60}
+                />
+              ) : null}
             </Logo>
             <Phone style={{ color: "white" }}>
               <PhoneFilled />

@@ -13,18 +13,22 @@ function Main() {
   const [lastCard, setLastCard] = useState<any>([]);
 
   useEffect(() => {
-    axios.get<any>("http://localhost:1337/api/block2s?populate=*").then((response) => {
-      const info = response.data.data;
-      // console.log('info:')
-      // console.log(info)
-      setMyData(info);
-    });
-    axios.get<any>("http://localhost:1337/api/block2-1s?populate=*").then((response) => {
-      const info = response.data.data;
-      // console.log('info:')
-      // console.log(info)
-      setLastCard(info);
-    });
+    axios
+      .get<any>("http://localhost:1337/api/block2s?populate=*")
+      .then((response) => {
+        const info = response.data.data;
+        // console.log('info:')
+        // console.log(info)
+        setMyData(info);
+      });
+    axios
+      .get<any>("http://localhost:1337/api/block2-1s?populate=*")
+      .then((response) => {
+        const info = response.data.data;
+        // console.log('info:')
+        // console.log(info)
+        setLastCard(info);
+      });
   }, []);
 
   return (

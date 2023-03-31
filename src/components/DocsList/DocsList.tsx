@@ -22,7 +22,7 @@ function DocsList() {
       .then((response: any) => {
         const info = response.data.data;
         setCardsData(info);
-      })
+      });
   }, []);
 
   return (
@@ -44,14 +44,13 @@ function DocsList() {
 
                 {cardsData ? (
                   <Collapse expandIconPosition={"end"}>
-                    {cardsData.map(( elem: any, i: number) => (
-                    <Panel key={i} header={elem.attributes.title}>
-                      <p>{elem.attributes.innerText}</p>
-                    </Panel>
-                     ))}
+                    {cardsData.map((elem: any, i: number) => (
+                      <Panel key={i} header={elem.attributes.title}>
+                        <p>{elem.attributes.innerText}</p>
+                      </Panel>
+                    ))}
                   </Collapse>
                 ) : null}
-
               </Wrapper>
             </Col>
           </Row>

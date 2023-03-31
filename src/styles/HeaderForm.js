@@ -18,7 +18,7 @@ export const Card = styled.div`
   background-color: white;
   box-sizing: border-box;
   padding: 16px;
-  
+
   @media (min-width: ${queries.lg}) {
     padding: 30px;
   }
