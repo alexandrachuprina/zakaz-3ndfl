@@ -30,7 +30,6 @@ const Header = () => {
       .get("http://localhost:1337/api/block1?populate=*")
       .then((response: any) => {
         const info = response.data.data.attributes;
-        const url = response.data.data.attributes.url;
         setMyData(info);
 
         if (response.status === 200) {
