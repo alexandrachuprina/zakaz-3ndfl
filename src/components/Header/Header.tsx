@@ -18,8 +18,6 @@ import {
 import HeaderForm from "@/src/components/HeaderForm";
 import ButtonWhatsWhite from "../Buttons/ButtonWhatsUpWhite";
 
-import logo from "../../assets/Header/logo.svg";
-
 const Header = () => {
   const [myData, setMyData] = useState<any>([]);
   const [subheaders, setSubheaders] = useState<any>([]);

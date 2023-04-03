@@ -1,18 +1,10 @@
 import styled from "styled-components";
-import background from "src/assets/Header/background.jpg";
 import { queries } from "../assets/queries";
 import { colors } from "../assets/colors";
 import Image from "next/image";
 
 export const HeadWrapper = styled.div`
   background-color: ${colors.darkGray};
-  /* background-image: ${background};
-  width: 100vw;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: fit-content; */
-
   @media (min-width: ${queries.lg}) {
     height: 100vh;
   }

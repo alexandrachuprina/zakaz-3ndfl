@@ -26,11 +26,7 @@ function MainCardLast(props: Props) {
           src={props.src}
           alt={props.header}
           width={200}
-          height={200}
-          // style={{
-          //   width: "auto",
-          //   height: "100%",
-          // }}
+          height={140}
         />
       </ImageWrapper>
       <TextWrapper>
