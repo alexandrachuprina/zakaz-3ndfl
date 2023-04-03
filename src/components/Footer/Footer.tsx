@@ -3,7 +3,6 @@ import axios from "axios";
 import { Row, Col } from "antd";
 import { Section, Logo, Line, Credits, Services } from "@/src/styles/Footer";
 import Image from "next/image";
-// import logo from "../../assets/Header/logo.svg";
 
 function Footer() {
   const [text, setText] = useState<any>([]);
@@ -21,7 +20,7 @@ function Footer() {
       .get("http://localhost:1337/api/footer?populate=*")
       .then((response: any) => {
         const info = response.data.data.attributes.logo.data.attributes.url;
-        setLink(info)
+        setLink(info);
       });
   }, []);
 
@@ -30,10 +29,17 @@ function Footer() {
       <Row justify={"center"}>
         <Col span={24}>
           <Row justify={"center"}>
-            <Col span={22} md={18} lg={22} xl={20}>
-              {/* <Logo>
-                {link ? <Image src={`http://localhost:1337${link}`} alt="Logo" width={`180`} height={60}/> : null}
-              </Logo> */}
+            <Col span={22} md={18} lg={22} xl={17}>
+              <Logo>
+                {link ? (
+                  <Image
+                    src={`http://localhost:1337${link}`}
+                    alt="Logo"
+                    width={`180`}
+                    height={60}
+                  />
+                ) : null}
+              </Logo>
               <Services>
                 {text.map((elem: any, i: number) => (
                   <p>{elem.attributes.name}</p>

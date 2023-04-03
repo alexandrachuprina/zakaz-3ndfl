@@ -3,8 +3,6 @@ import { queries } from "../assets/queries";
 import { colors } from "../assets/colors";
 
 export const MainWrapper = styled.div`
-  /* display: grid;
-  width: 100%; */
 
   @media (min-width: ${queries.lg}) {
     margin-top: 100px;

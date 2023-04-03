@@ -32,8 +32,8 @@ function Main() {
   }, []);
 
   return (
-    <Row justify={"center"} wrap={true}>
-      <Col span={22} md={20} lg={18} xl={20}>
+    <Row justify={"center"} wrap={true} style={{marginBottom: '100px'}}>
+      <Col span={22} md={20} lg={18} xl={17}>
         {myData ? (
           <>
             <MainWrapper>

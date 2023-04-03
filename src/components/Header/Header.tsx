@@ -29,21 +29,10 @@ const Header = () => {
       .then((response: any) => {
         const info = response.data.data.attributes;
         setMyData(info);
-
-        if (response.status === 200) {
-          const data = info.logo.data.attributes;
-          const url = data.url;
-          console.log(url);
-          setImage(url);
-        }
-
-        if (response.status === 200) {
-          const text: any = info.subheaders;
-          if (text) {
-            const subheaders: any = text.data;
-            setSubheaders(subheaders);
-          }
-        }
+        const link = response.data.data.attributes.logo.data.attributes.url;
+        setImage(link);
+        const text = response.data.data.attributes.subheaders.data;
+        setSubheaders(text);
       });
   }, []);
 
@@ -54,7 +43,7 @@ const Header = () => {
   return (
     <HeadWrapper>
       <Row justify="center">
-        <Col span={22} md={18} lg={22} xl={20}>
+        <Col span={22} md={18} lg={22} xl={17}>
           <Navbar>
             <Logo>
               {image ? (

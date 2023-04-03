@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { colors } from "../assets/colors";
+import { queries } from "../assets/queries";
 
 export const Section = styled.div`
   background-color: ${colors.darkGray};
@@ -17,7 +18,11 @@ export const Line = styled.div`
 export const Services = styled.div`
   p {
     color: white;
+    padding: 0 30px 0 0;
   }
+
+  @media (min-width: ${queries.lg}) {  display: flex;
+  flex-direction: row;}
 `;
 export const Credits = styled.div`
   p {
