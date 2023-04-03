@@ -28,7 +28,6 @@ export const ImageWrapper = styled.div`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding-bottom: 2vh; */
 
   @media (min-width: ${queries.xl}) {
     width: 65%;

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { Button, Form, Input, Select } from "antd";
 import { InputHeader, CardWrapper, Card } from "../../styles/HeaderForm";
 import ButtonWhatsBlack from "@/src/components/Buttons/ButtonWhatsUpBlack";
-import axios from "axios";
 
 const { Option } = Select;
 

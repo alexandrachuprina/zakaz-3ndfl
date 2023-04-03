@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Row, Col, Collapse } from "antd";
-import { Header, Wrapper, Section } from "../../styles/DocsList";
-import Image from "next/image";
-import icon from "../../assets/DocsList/icon.svg";
+import { Wrapper, Section } from "../../styles/DocsList";
 
 const { Panel } = Collapse;
 

@@ -10,7 +10,6 @@ export const Logo = styled.div`
   padding: 0 0 2vh 0;
 `;
 export const Line = styled.div`
-  /* width: 100vw; */
   height: 1px;
   background-color: white;
   margin: 2vh 0 2vh 0;
@@ -21,8 +20,10 @@ export const Services = styled.div`
     padding: 0 30px 0 0;
   }
 
-  @media (min-width: ${queries.lg}) {  display: flex;
-  flex-direction: row;}
+  @media (min-width: ${queries.lg}) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 export const Credits = styled.div`
   p {

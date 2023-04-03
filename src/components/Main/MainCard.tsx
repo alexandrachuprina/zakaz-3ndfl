@@ -23,16 +23,7 @@ function MainCard(props: Props) {
   return (
     <CardWrapper>
       <ImageWrapper>
-        <Image
-          src={props.src}
-          alt={props.header}
-          width={200}
-          height={200}
-          // style={{
-          //   width: "auto",
-          //   height: "100%",
-          // }}
-        />
+        <Image src={props.src} alt={props.header} width={200} height={200} />
       </ImageWrapper>
       <TextWrapper>
         <Header>

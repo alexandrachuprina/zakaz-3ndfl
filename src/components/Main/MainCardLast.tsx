@@ -22,12 +22,7 @@ function MainCardLast(props: Props) {
   return (
     <CardWrapper>
       <ImageWrapper>
-        <Image
-          src={props.src}
-          alt={props.header}
-          width={200}
-          height={200}
-        />
+        <Image src={props.src} alt={props.header} width={200} height={200} />
       </ImageWrapper>
       <TextWrapper>
         <Header>

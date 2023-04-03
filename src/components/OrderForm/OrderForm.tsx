@@ -4,8 +4,6 @@ import { Row, Col } from "antd";
 import HeaderForm from "@/src/components/HeaderForm";
 import Image from "next/image";
 import { ImageWrapper, Section, Wrapper } from "@/src/styles/OrderForm";
-// import icon from "../../assets/OrderForm/icon.svg";
-import ButtonWhatsBlack from "../Buttons/ButtonWhatsUpBlack";
 
 function OrderForm() {
   const [link, setLink] = useState<any>([]);
@@ -14,11 +12,11 @@ function OrderForm() {
     axios
       .get("http://localhost:1337/api/order-form?populate=*")
       .then((response: any) => {
-        const info = response.data.data.attributes.orderIcon.data.attributes.url;
-        console.log("info")
-        console.log(info)
+        const info =
+          response.data.data.attributes.orderIcon.data.attributes.url;
+        console.log("info");
+        console.log(info);
         setLink(info);
-        
       });
   }, []);
 

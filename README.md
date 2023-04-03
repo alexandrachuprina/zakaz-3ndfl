@@ -9,4 +9,4 @@
 3. Styled Components
 4. React Yandex Maps
 5. Strapi
-6. Axios 
+6. Axios

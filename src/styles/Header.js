@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { queries } from "../assets/queries";
 import { colors } from "../assets/colors";
-import Image from "next/image";
 
 export const HeadWrapper = styled.div`
   background-color: ${colors.darkGray};
@@ -40,7 +39,6 @@ export const Phone = styled.div`
 export const MainSection = styled.div`
   display: flex;
   flex-direction: column;
-  /* margin: 77px 0 0 0; */
 
   @media (min-width: ${queries.lg}) {
     margin: 77px 0 0 0;

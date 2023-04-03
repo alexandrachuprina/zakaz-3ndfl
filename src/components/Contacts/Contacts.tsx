@@ -11,7 +11,6 @@ import {
   Section,
   Wrapper,
 } from "../../styles/Contacts";
-import { InstagramFilled, TwitterCircleFilled } from "@ant-design/icons";
 import MapSection from "../Map";
 
 function Contacts() {
@@ -30,7 +29,6 @@ function Contacts() {
       const info = response.data.data.attributes.header;
       setHeader(info);
     });
-    // Adress
     axios.get("http://localhost:1337/api/block6adress").then((response) => {
       const info = response.data.data.attributes.header;
       setAdressHeader(info);
@@ -39,7 +37,6 @@ function Contacts() {
       const info = response.data.data;
       setAdresses(info);
     });
-    // Telephone
     axios.get("http://localhost:1337/api/block6-tel").then((response) => {
       const info = response.data.data.attributes.title;
       setTelHeader(info);
@@ -48,7 +45,6 @@ function Contacts() {
       const info = response.data.data;
       setTel(info);
     });
-    // Email
     axios.get("http://localhost:1337/api/block6mail").then((response) => {
       const info = response.data.data.attributes.title;
       setEmailHeader(info);
@@ -57,7 +53,6 @@ function Contacts() {
       const info = response.data.data[0].attributes.mail;
       setEmail(info);
     });
-    // Social
     axios.get("http://localhost:1337/api/block6-social").then((response) => {
       const info = response.data.data.attributes.title;
       setSocialHeader(info);

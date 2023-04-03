@@ -10,15 +10,7 @@ export const ImageWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  /* height: 40vh; */
   padding-bottom: 1vh;
-
-  @media (min-width: ${queries.lg}) {
-    /* height: 70vh; */
-  }
-  @media (min-width: ${queries.xl}) {
-    /* height: 75vh; */
-  }
 `;
 export const Wrapper = styled.div`
   display: flex;

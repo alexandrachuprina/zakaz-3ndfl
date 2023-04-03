@@ -3,8 +3,8 @@ import { queries } from "../assets/queries";
 import { colors } from "../assets/colors";
 
 export const Section = styled.div`
-background-color: ${colors.lightGray};
-`
+  background-color: ${colors.lightGray};
+`;
 
 export const Wrapper = styled.div`
   display: flex;
