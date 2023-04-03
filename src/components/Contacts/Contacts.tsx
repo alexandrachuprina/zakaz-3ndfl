@@ -40,7 +40,7 @@ function Contacts() {
       setAdresses(info);
     });
     // Telephone
-    axios.get("http://localhost:1337/api/block6adress").then((response) => {
+    axios.get("http://localhost:1337/api/block6-tel").then((response) => {
       const info = response.data.data.attributes.title;
       setTelHeader(info);
     });
