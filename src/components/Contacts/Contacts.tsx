@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import axios from "axios";
 import { Row, Col } from "antd";
 import {
   Text,
@@ -9,10 +11,61 @@ import {
   Section,
   Wrapper,
 } from "../../styles/Contacts";
-import { InstagramFilled, TwitterCircleFilled } from "@ant-design/icons";
 import MapSection from "../Map";
 
 function Contacts() {
+  const [header, setHeader] = useState<any>([]);
+  const [adressHeader, setAdressHeader] = useState<any>([]);
+  const [adresses, setAdresses] = useState<any>();
+  const [telHeader, setTelHeader] = useState<any>([]);
+  const [tel, setTel] = useState<any>([]);
+  const [emailHeader, setEmailHeader] = useState<any>([]);
+  const [email, setEmail] = useState<any>([]);
+  const [socialHeader, setSocialHeader] = useState<any>([]);
+  const [social, setSocial] = useState<any>([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:1337/api/block6").then((response: any) => {
+      const info = response.data.data.attributes.header;
+      setHeader(info);
+    });
+    axios.get("http://localhost:1337/api/block6adress").then((response) => {
+      const info = response.data.data.attributes.header;
+      setAdressHeader(info);
+    });
+    axios.get("http://localhost:1337/api/adresses").then((response: any) => {
+      const info = response.data.data;
+      setAdresses(info);
+    });
+    axios.get("http://localhost:1337/api/block6-tel").then((response) => {
+      const info = response.data.data.attributes.title;
+      setTelHeader(info);
+    });
+    axios.get("http://localhost:1337/api/tels").then((response) => {
+      const info = response.data.data;
+      setTel(info);
+    });
+    axios.get("http://localhost:1337/api/block6mail").then((response) => {
+      const info = response.data.data.attributes.title;
+      setEmailHeader(info);
+    });
+    axios.get("http://localhost:1337/api/emails").then((response) => {
+      const info = response.data.data[0].attributes.mail;
+      setEmail(info);
+    });
+    axios.get("http://localhost:1337/api/block6-social").then((response) => {
+      const info = response.data.data.attributes.title;
+      setSocialHeader(info);
+    });
+    axios
+      .get("http://localhost:1337/api/socialmedias?populate=*")
+      .then((response) => {
+        const info = response.data.data;
+        console.log(social);
+        setSocial(info);
+      });
+  }, []);
+
   return (
     <Row justify={"center"}>
       <Col span={24}>
@@ -22,57 +75,55 @@ function Contacts() {
               <Section>
                 <Text>
                   <Header>
-                    <h1>Контактная информация</h1>
+                    <h1>{header}</h1>
                   </Header>
                   <Subheader>
-                    <p>Адрес</p>
+                    <p>{adressHeader}</p>
+                  </Subheader>
+                  <ul>
+                    {adresses ? (
+                      <>
+                        {adresses.map((elem: any, i: number) => (
+                          <li key={i}>{elem.attributes.name}</li>
+                        ))}
+                      </>
+                    ) : null}
+                  </ul>
+                  <Subheader>
+                    <p>{telHeader}</p>
+                  </Subheader>
+                  <ul>
+                    {tel.map((elem: any, i: number) => (
+                      <li key={i}>
+                        <a href={`tel:${elem.attributes.telephone}`}>
+                          <p>{elem.attributes.telephone}</p>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                  <Subheader>
+                    <p>{emailHeader}</p>
                   </Subheader>
                   <ul>
                     <li>
-                      <p>г. Москва, Новая Площадь, д. 6</p>
-                    </li>
-                    <li>
-                      <p>г. Санкт-Петербург, ул. Гороховая, д. 46</p>
-                    </li>
-                    <li>
-                      <p>г. Оренбург проспект Гагарина, д. 23В</p>
+                      <p>{email}</p>
                     </li>
                   </ul>
                   <Subheader>
-                    <p>Телефоны</p>
-                  </Subheader>
-                  <ul>
-                    <li>
-                      <a href="tel:+79033660552">
-                        <p>+7 (903) 366-05-52</p>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:+79033660552">
-                        <p>+7 (903) 366-05-52</p>
-                      </a>
-                    </li>
-                  </ul>
-                  <Subheader>
-                    <p>Электронная почта</p>
-                  </Subheader>
-                  <ul>
-                    <li>
-                      <p>nalog.2@mail.ru</p>
-                    </li>
-                  </ul>
-                  <Subheader>
-                    <p>Мы в соц сетях</p>
+                    <p>{socialHeader}</p>
                   </Subheader>
                   <SocialWrapper>
-                    <Social>
-                      <InstagramFilled />
-                      <p>4501</p>
-                    </Social>
-                    <Social>
-                      <TwitterCircleFilled />
-                      <p>389</p>
-                    </Social>
+                    {social.map((elem: any, i: number) => (
+                      <Social>
+                        <Image
+                          src={`http://localhost:1337${elem.attributes.icon.data.attributes.url}`}
+                          alt={"icon"}
+                          width={20}
+                          height={20}
+                        />
+                        <p>{elem.attributes.followers}</p>
+                      </Social>
+                    ))}
                   </SocialWrapper>
                 </Text>
               </Section>

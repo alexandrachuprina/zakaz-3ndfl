@@ -39,7 +39,7 @@ export const Section = styled.div`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  
+
   @media (min-width: ${queries.lg}) {
   }
 `;

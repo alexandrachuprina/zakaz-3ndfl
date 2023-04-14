@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { colors } from "../assets/colors";
 
 export const Section = styled.div`
-  background-color: ${colors.lightGray};
+  background-color: ${colors.mediumGray};
 `;
 export const Wrapper = styled.div`
-  padding: 4vh 0 4vh 0;
+  padding: 1vh 0 4vh 0;
 `;
 export const Header = styled.div`
   display: flex;

@@ -7,7 +7,6 @@ import {
   Symbols,
   NoLine,
 } from "@/src/styles/Timeline";
-import { Row, Col } from "antd";
 
 interface Props {
   number: number;

@@ -1,104 +1,65 @@
-import React from "react";
-import Image from "next/image";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import MainCard from "./MainCard";
 import MainCardLast from "./MainCardLast";
 
 import { Col, Row } from "antd";
-
 import { MainWrapper } from "../../styles/Main";
-import pic01 from "../../assets/Main/pic01.svg";
-import pic02 from "../../assets/Main/pic02.svg";
-import pic03 from "../../assets/Main/pic03.svg";
-import pic05 from "../../assets/Main/pic05.svg";
-import pic06 from "../../assets/Main/pic06.svg";
-import pic07 from "../../assets/Main/pic07.svg";
 
 function Main() {
-  // console.log(window.innerWidth)
+  const [myData, setMyData] = useState<any>([]);
+  const [lastCard, setLastCard] = useState<any>([]);
+
+  useEffect(() => {
+    axios
+      .get<any>("http://localhost:1337/api/block2s?populate=*")
+      .then((response) => {
+        const info = response.data.data;
+        setMyData(info);
+      });
+    axios
+      .get<any>("http://localhost:1337/api/block2-1s?populate=*")
+      .then((response) => {
+        const info = response.data.data;
+        setLastCard(info);
+      });
+  }, []);
+
   return (
-    <Row justify={"center"} wrap={true}>
-      <Col span={22} md={20} lg={18} xl={20}>
-        <MainWrapper>
-            <MainCard
-              header="КУПИЛИ НЕДВИЖИМОСТЬ?"
-              paragraph1="Вы приобрели недвижимость (квартира, дом, комната, земельный участок с домом)?"
-              paragraph2="Вы можете вернуть до 260 000 рублей с суммы, уплаченной за вашу квартиру или дом, 
-                а также можете вернуть до 390 000 рублей с уплаченных процентов по ипотеке."
-              //@ts-ignore
-              src={pic01}
-              buttonText="ЗАКАЗАТЬ"
-              price={true}
-            />
-        
-            <MainCard
-              header="ОПЛАТИЛИ ОБУЧЕНИЕ?"
-              paragraph1="Вы заплатили за свое обучение, за своих детей, или братьев, сестер?"
-              paragraph2="Вы имеете право получить 13% от сумм, затраченных Вами на обучение."
-              //@ts-ignore
-              src={pic02}
-              buttonText="ЗАКАЗАТЬ"
-              price={true}
-            />
-
-          <MainCard
-            header="ОПЛАТИЛИ ЛЕЧЕНИЕ?"
-            paragraph1="Вы приобрели недвижимость (квартира, дом, комната, земельный участок с домом)?"
-            paragraph2="Вы можете вернуть до 260 000 рублей с суммы, уплаченной за вашу квартиру или дом, 
-                а также можете вернуть до 390 000 рублей с уплаченных процентов по ипотеке."
-            //@ts-ignore
-            src={pic03}
-            buttonText="ЗАКАЗАТЬ"
-            price={true}
-          />
-
-          <MainCard
-            header="ДОПОЛНИТЕЛЬНЫЙ ДОХОД"
-            paragraph1="Подготовим все нужные документы"
-            paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
-                Вы не платите госпошлину 800 ₽
-                Вам не нужно ходить в налогоовую"
-            //@ts-ignore
-            src={pic05}
-            buttonText="ОСТАВИТЬ ЗАЯВКУ"
-            price={true}
-          />
-
-          <MainCard
-            header="СТРАХОВАНИЕ"
-            paragraph1="Подготовим все нужные документы"
-            paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
-                Вы не платите госпошлину 800 ₽
-                Вам не нужно ходить в налогоовую"
-            //@ts-ignore
-            src={pic05}
-            buttonText="ОСТАВИТЬ ЗАЯВКУ"
-            price={true}
-          />
-
-          <MainCard
-            header="ИНВЕСТИЦИИ"
-            paragraph1="Подготовим все нужные документы"
-            paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
-                Вы не платите госпошлину 800 ₽
-                Вам не нужно ходить в налогоовую"
-            //@ts-ignore
-            src={pic06}
-            buttonText="ОСТАВИТЬ ЗАЯВКУ"
-            price={true}
-          />
-        </MainWrapper>
-
-        <MainCardLast
-          header="БЕСПЛАТНАЯ РЕГИСТРАЦИЯ ИП И ООО"
-          paragraph1="Подготовим все нужные документы"
-          paragraph2="Поможем выбрать систему налогооблажения и виды деятельности. 
-                Вы не платите госпошлину 800 ₽
-                Вам не нужно ходить в налогоовую"
-          //@ts-ignore
-          src={pic07}
-          buttonText="ОСТАВИТЬ ЗАЯВКУ"
-          price={false}
-        />
+    <Row justify={"center"} wrap={true} style={{ marginBottom: "100px" }}>
+      <Col span={22} md={20} lg={18} xl={17}>
+        {myData ? (
+          <>
+            <MainWrapper>
+              {myData.map((item: any, i: number) => (
+                <MainCard
+                  key={i}
+                  header={myData[i].attributes.header}
+                  paragraph={myData[i].attributes.description}
+                  //@ts-ignore
+                  src={`http://localhost:1337${myData[i].attributes.pic.data[0].attributes.url}`}
+                  buttonText={myData[i].attributes.buttontext}
+                  price={true}
+                />
+              ))}
+            </MainWrapper>
+            {lastCard ? (
+              <>
+                {lastCard.map((item: any, i: number) => (
+                  <MainCardLast
+                    key={i}
+                    header={lastCard[i].attributes.Header}
+                    paragraph={lastCard[i].attributes.Description}
+                    //@ts-ignore
+                    src={`http://localhost:1337${lastCard[i].attributes.pic.data.attributes.url}`}
+                    buttonText={lastCard[i].attributes.buttontext}
+                    price={true}
+                  />
+                ))}
+              </>
+            ) : null}
+          </>
+        ) : null}
       </Col>
     </Row>
   );

@@ -10,6 +10,7 @@ export const CardWrapper = styled.div`
   @media (min-width: ${queries.lg}) {
     flex-direction: row;
     justify-content: space-between;
+    height: 250px;
   }
 `;
 
@@ -27,7 +28,6 @@ export const ImageWrapper = styled.div`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  /* padding-bottom: 2vh; */
 
   @media (min-width: ${queries.xl}) {
     width: 65%;
@@ -36,6 +36,7 @@ export const TextWrapper = styled.div`
 export const Price = styled.div`
   margin: 2vh 0 2vh 0;
   display: inline-block;
+  width: fit-content;
   box-sizing: border-box;
   background-color: ${colors.yellow};
   color: black;
@@ -46,10 +47,10 @@ export const Header = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   h2 {
-    padding-bottom: 2vh;
+    padding: 2vh 0 2vh 0;
   }
 `;
 export const ButtonsWrapper = styled.div`
   margin-top: auto;
-  padding-top: 2vh;
+  padding-top: 1vh;
 `;

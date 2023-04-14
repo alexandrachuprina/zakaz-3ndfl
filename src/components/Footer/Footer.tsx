@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Row, Col } from "antd";
 import { Section, Logo, Line, Credits, Services } from "@/src/styles/Footer";
 import Image from "next/image";
-import logo from "../../assets/Header/logo.svg";
 
 function Footer() {
+  const [text, setText] = useState<any>([]);
+  const [link, setLink] = useState<any>([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:1337/api/footer-links?populate=*")
+      .then((response: any) => {
+        const info = response.data.data;
+        setText(info);
+      });
+
+    axios
+      .get("http://localhost:1337/api/footer?populate=*")
+      .then((response: any) => {
+        const info = response.data.data.attributes.logo.data.attributes.url;
+        setLink(info);
+      });
+  }, []);
+
   return (
     <Section>
       <Row justify={"center"}>
         <Col span={24}>
           <Row justify={"center"}>
-            <Col span={22} md={18} lg={22} xl={20}>
+            <Col span={22} md={18} lg={22} xl={17}>
               <Logo>
-                <Image src={logo} alt="Logo" width={`180`} />
+                {link ? (
+                  <Image
+                    src={`http://localhost:1337${link}`}
+                    alt="Logo"
+                    width={`180`}
+                    height={60}
+                  />
+                ) : null}
               </Logo>
               <Services>
-                <p>Заполним 3-ндфл недорого</p>
-                <p>Закажите декларацию 3-НДФЛ онлайн</p>
+                {text.map((elem: any, i: number) => (
+                  <p>{elem.attributes.name}</p>
+                ))}
               </Services>
               <Credits>
                 <Line />
