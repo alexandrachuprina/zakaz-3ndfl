@@ -1,11 +1,8 @@
 # Educational project (trainee position)
 
-Static landing page with application form.
-
-## Work in progress
+Static landing page
 
 ## Created with:
-
 1. Next.js
 2. Ant design
 3. Styled Components
